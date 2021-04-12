@@ -1,0 +1,155 @@
+/*
+  Localizable.strings
+  Full
+
+  Created by dev on 11/4/19.
+  Copyright © 2019 dev. All rights reserved.
+*/
+
+"menu_title" = "    Valikko";
+"menu_settings" = "Asetukset";
+"menu_help" = "Ohje";
+"menu_privacy_policy" = "Yksityisyysseloste";
+"menu_term_of_service" = "Käyttöehdot";
+
+
+"search_placeholder" = "Haku";
+
+"navigation_next_action_then" = "Jonka jälkeen";
+
+"explore_near_by" = "Lähialueella";
+
+"floor" = "Kerros %d";
+
+"poi_detail_show_me_direction" = "Näytä reitti";
+"poi_about" = "Tietoa";
+
+"end_of_results" = "Ei enempää tuloksia";
+"no_results" = "Ei tuloksia!";
+"results" = " Tulokset";
+
+"place_not_covered_title" = "🛑";
+"place_not_covered" = "Sijainti paikannusalueen ulkopuolella.";
+
+"ok" = "Ok";
+"help" = "OHJE";
+
+"amenity-bathroom" = "WC-tilat";
+"amenity-cafe" = "Kahvilat";
+"amenity-parking" = "Parkkipaikat";
+"amenity-exits" = "Uloskäynnit";
+"amenity-meeting-rooms" = "Neuvottelutilat";
+
+"poi_direction_calculating" = "Lasketaan";
+"poi_na" = "Ei saatavilla";
+"poi_trip" = "Reitti";
+"poi_location_description" = "Kuvaus";
+"poi_my_trip" = "Matkani:\n";
+
+
+"search_explore" = "Suodata";
+
+"map_title" = "Kartta";
+
+"map_location_permission_title" = "Paikannuslupa";
+"map_location_permission_message" = "Paikantaminen sekä navigointi tarvitsee paikkatietoluvat toimiakseen.\n\nTKytketäänkö paikannus päälle?";
+"map_location_bluetooth_title" = "Bluetooth-lupa";
+"map_location_bluetooth_message" = "Paikantaminen tarvitsee bluetoothin toimiakseen.\n\nKytketäänkö bluetooth päälle?";
+"map_no" = "Ei";
+"map_yes" = "Kyllä";
+"map_close" = "Sulje";
+"map_nav_title" = "Navigaatio";
+"map_nav_message" = "Reitin muodostaminen epäonnistui";
+
+"preview_from" = "Lähtöpiste";
+"preview_to" = "Kohde";
+"preview_start" = "Aloita";
+"preview_cancel_route" = "Peruuta";
+"preview_show_trip" = "Näytä reitti";
+"preview_detailed" = "Tarkemmat reittiohjeet";
+"preview_my_location" = "Sijaintini";
+
+"you_are_in" = "Olet tällä hetkellä %@";
+"hazard" = "Huomio %@";
+
+"settings_title" = "Asetukset";
+"settings_display_mode" = "Näkymän asetukset";
+"settings_route_options" = "Reitin asetukset";
+"settings_avoid_stairs" = "Vältä portaita";
+"settings_avoid_escalator" = "Vältä liukuportaita";
+"settings_avoid_elevator" = "Valta hissejä";
+"settings_avoid_revolving_doors" = "Vältä pyöröovia";
+"settings_use_acessible_routes" = "Käytä saavutettavia reittejä";
+"settings_distance" = "Näytä etäisyydet";
+"settings_distance_meters" = "Metreinä";
+"settings_distance_steps" = "Askelina";
+"settings_voice_guidance" = "Ääniohjaus";
+"settings_voice_notification" = "Notification";
+"settings_voice_confirm" = "Kulkusuunnan vahvistus";
+"settings_voice_speak_decision" = "Kerro päätöskohdista";
+"settings_voice_speak_hazard" = "Kerro huomioista";
+"settings_voice_speak_landmark" = "Kerro maamerkeistä";
+"settings_voice_speak_segment" = "Kerro alueista";
+"settings_voice_confirm_trip" = "Reitin vahvistus";
+"settings_voice_confirm_trip_every" = "Vahvista reitti joka";
+"settings_voice_10_meter" = "10 metri";
+"settings_voice_15_meter" = "15 metri";
+"settings_voice_20_meter" = "20 metri";
+"settings_voice_25_meter" = "25 metri";
+"settings_accessitibility" = "Saavutettavuusasetukset";
+"settings_vibrate" = "Värinä";
+"settings_zoom_in_out" = "Lähennä / loitonna -painikkeet karttanäkymässä";
+"settings_hand_mode" = "Kätisyys";
+"settings_left" = "Vasen";
+"settings_right" = "Oikea";
+"settings_call_help" = "Kutsu apua -painike";
+"settings_guidance_disability" = "Kyvyttömyyteen perustuva opastus";
+"settings_help" = "Ohje";
+"settings_privacy" = "Yksityisyysseloste";
+"settings_terms_of_service" = "Käyttöehdot";
+"settings_about" = "Tietoa";
+
+"settings_navigation_type" = "Orientaatio";
+"settings_navigation_compass" = "Kompassiin perustuva";
+"settings_navigation_heading" = "Reitin suuntaan perustuva";
+
+"settings_guidance_disability_vision_impairment" = "Näkövamma";
+"settings_guidance_disability_hearing_impairment" = "Kuulovamma";
+"settings_guidance_disability_neurodiverse" = "Neurodiversiteetti";
+"settings_guidance_disability_ambulant_disabled" = "Rajattu kävelykyky";
+"settings_guidance_disability_wheelchair_users" = "Pyörätuolikäyttäjä";
+"settings_guidance_disability_none" = "Ei mitään";
+
+"settings_high_contrast" = "Korkea kontrasti";
+
+"calibration_title" = "Kalibrointi";
+"calibration_message" = "Liikuta laitetta kahdeksikon muotoisessa kuviossa.\n\nVoit toistaa toimenpiteen aina, kun kompassin tarkkuus vaikuttaa heikolta.";
+"calibration_dismiss" = "Valmis";
+
+"first_run" = "Tämä sovellus on suunniteltu saavutettavaksi.\n\nSiirrytäänkö asetuksiin?";
+
+"settings_save" = "Tallenna";
+
+"add_waypoints" = "Lisää välietappeja";
+"waypoint_via" = "Kautta";
+
+"back" = "Takaisin";
+
+"reset_app" = "Sovellus on suljettava ja käynnistettävä uudelleen käsin, jotta asetukset tulevat voimaan";
+"reset_yes" = "Jatka";
+
+"start_preview_message" = "Reitti löydetty, tarkkuus noin kolme metriä";
+
+"take_me_there" = "Käynnistä navigointi";
+"nearest_parking" = "Lähin parkkipaikka reitillä";
+"nearest_parking_selected" = "Poista parkkipaikka reitiltä";
+"show_route" = "Näytä reitti";
+"show_route_selected" = "Piilota reitti";
+
+"map_out_geofence_title" = "Huomautus";
+"map_out_geofence_message" = "Olet paikannusalueen ulkopuolella";
+"map_out_geofence_close" = "Sulje";
+
+"no_results" = "Tuloksia ei löydetty";
+
+"show_more_detail" = "Näytä lisätietoja";

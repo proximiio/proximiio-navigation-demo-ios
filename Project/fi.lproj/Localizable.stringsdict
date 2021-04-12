@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>time_minute</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu minuuttia</string>
+			<key>one</key>
+			<string>%lu minuutti</string>
+			<key>two</key>
+			<string>%lu minuuttia</string>
+			<key>few</key>
+			<string>%lu minuutti</string>
+			<key>many</key>
+			<string>%lu minuutteja</string>
+			<key>other</key>
+			<string>%lu minuuttia</string>
+		</dict>
+	</dict>
+	<key>time_second</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu sekuntia</string>
+			<key>one</key>
+			<string>%lu sekunti</string>
+			<key>two</key>
+			<string>%lu sekuntia</string>
+			<key>few</key>
+			<string>%lu sekunti</string>
+			<key>many</key>
+			<string>%lu sekuntia</string>
+			<key>other</key>
+			<string>%lu sekuntia</string>
+		</dict>
+	</dict>
+	<key>distance_step</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu askelta</string>
+			<key>one</key>
+			<string>%lu askel</string>
+			<key>two</key>
+			<string>%lu askelta</string>
+			<key>few</key>
+			<string>%lu askel</string>
+			<key>many</key>
+			<string>%lu askelta</string>
+			<key>other</key>
+			<string>%lu askelta</string>
+		</dict>
+	</dict>
+	<key>distance_step_left</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu askelta jäljellä</string>
+			<key>one</key>
+			<string>%lu askel jäljellä</string>
+			<key>two</key>
+			<string>%lu askelta jäljellä</string>
+			<key>few</key>
+			<string>%lu askel jäljellä</string>
+			<key>many</key>
+			<string>%lu askelta jäljellä</string>
+			<key>other</key>
+			<string>%lu askelta jäljellä</string>
+		</dict>
+	</dict>
+	<key>distance_meter</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu metriä</string>
+			<key>one</key>
+			<string>%lu metri</string>
+			<key>two</key>
+			<string>%lu metriä</string>
+			<key>few</key>
+			<string>%lu metri</string>
+			<key>many</key>
+			<string>%lu metriä</string>
+			<key>other</key>
+			<string>%lu metriä</string>
+		</dict>
+	</dict>
+	<key>distance_meter_left</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu metriä jäljellä</string>
+			<key>one</key>
+			<string>%lu metri jäljellä</string>
+			<key>two</key>
+			<string>%lu metriä jäljellä</string>
+			<key>few</key>
+			<string>%lu metri jäljellä</string>
+			<key>many</key>
+			<string>%lu metriä jäljellä</string>
+			<key>other</key>
+			<string>%lu metriä jäljellä</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

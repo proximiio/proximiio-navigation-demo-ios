@@ -1,0 +1,156 @@
+/*
+  Localizable.strings
+  Full
+
+  Created by dev on 11/4/19.
+  Copyright © 2019 dev. All rights reserved.
+*/
+
+"menu_title" = "    Menu";
+"menu_settings" = "Settings";
+"menu_help" = "Help";
+"menu_privacy_policy" = "Privacy Policy";
+"menu_term_of_service" = "Term of Service";
+
+
+"search_placeholder" = "Search";
+
+"navigation_next_action_then" = "Then";
+
+"explore_near_by" = "Explore Nearby";
+
+"floor" = "Floor %d";
+
+"floor_unknown" = "Unknown floor";
+
+"poi_detail_show_me_direction" = "Show me directions";
+"poi_about" = "About the";
+
+"end_of_results" = "End of results";
+"no_results" = "No Results!";
+"results" = " Results";
+
+"place_not_covered_title" = "🛑";
+"place_not_covered" = "The place you are in isn't covered. Talk to someone in charge and recomend us.";
+
+"ok" = "Ok";
+"help" = "HELP";
+
+"amenity-bathroom" = "Bathroom";
+"amenity-cafe" = "Cafe";
+"amenity-parking" = "Parking";
+"amenity-exits" = "Exits";
+"amenity-meeting-rooms" = "Meeting Rooms";
+
+"poi_direction_calculating" = "Calculating";
+"poi_na" = "N/A";
+"poi_trip" = "Trip";
+"poi_location_description" = "Location Description";
+"poi_my_trip" = "My trip:\n";
+
+"search_explore" = "Filter";
+
+"map_title" = "Map";
+
+"map_location_permission_title" = "Location Permission";
+"map_location_permission_message" = "Without location information, we can't show you where to go.\n\nTurn location on ?";
+"map_location_bluetooth_title" = "Bluetooth Permission";
+"map_location_bluetooth_message" = "Without bluetooth, we can't show you where to go.\n\nTurn Bluetooth on ?";
+"map_no" = "No";
+"map_yes" = "Yes";
+"map_close" = "Close";
+"map_nav_title" = "Navigation";
+"map_nav_message" = "An error has occured while generating the route from your position, if problem persist please notify to staff";
+
+"preview_from" = "From";
+"preview_to" = "To";
+"preview_start" = "Start Navigation";
+"preview_cancel_route" = "Cancel Route";
+"preview_show_trip" = "Show Trip";
+"preview_detailed" = "Detailed trip directions";
+"preview_my_location" = "My Location";
+
+"you_are_in" = "You are currently in %@";
+"hazard" = "Hazard %@";
+
+"settings_title" = "Settings";
+"settings_display_mode" = "Display options";
+"settings_route_options" = "Route options";
+"settings_avoid_stairs" = "Avoid stairs";
+"settings_avoid_escalator" = "Avoid escalators";
+"settings_avoid_elevator" = "Avoid elevator";
+"settings_avoid_revolving_doors" = "Avoid revolving doors";
+"settings_use_acessible_routes" = "Use accessible routes";
+"settings_distance" = "Measure distance in";
+"settings_distance_meters" = "Meters";
+"settings_distance_steps" = "Steps";
+"settings_voice_guidance" = "Voice guidance";
+"settings_voice_notification" = "Notification";
+"settings_voice_confirm" = "Confirm direction of travel";
+"settings_voice_speak_decision" = "Tell me about decision points";
+"settings_voice_speak_hazard" = "Tell me about some hazards";
+"settings_voice_speak_landmark" = "Tell me about some landmarks";
+"settings_voice_speak_segment" = "Tell me about some areas";
+"settings_voice_confirm_trip" = "Confirm route";
+"settings_voice_confirm_trip_every" = "Confirm route every";
+"settings_voice_10_meter" = "10 meters";
+"settings_voice_15_meter" = "15 meters";
+"settings_voice_20_meter" = "20 meters";
+"settings_voice_25_meter" = "25 meters";
+"settings_accessitibility" = "Accessibility settings";
+"settings_vibrate" = "Vibration";
+"settings_zoom_in_out" = "Zoom in / out buttons on map";
+"settings_hand_mode" = "Hand mode";
+"settings_left" = "Left";
+"settings_right" = "Right";
+"settings_call_help" = "Call for help button";
+"settings_guidance_disability" = "Guidance based on type of disability";
+"settings_help" = "Help";
+"settings_privacy" = "Privacy Policy";
+"settings_terms_of_service" = "Terms of Service";
+"settings_about" = "About";
+
+"settings_navigation_type" = "Navigation type";
+"settings_navigation_compass" = "Based on the compass";
+"settings_navigation_heading" = "Based on pre-set paths";
+
+"settings_guidance_disability_vision_impairment" = "Vision impairment";
+"settings_guidance_disability_hearing_impairment" = "Hearing impairment";
+"settings_guidance_disability_neurodiverse" = "Neurodiverse";
+"settings_guidance_disability_ambulant_disabled" = "Ambulant disabled";
+"settings_guidance_disability_wheelchair_users" = "Wheelchair users";
+"settings_guidance_disability_none" = "None";
+
+"settings_high_contrast" = "High contrast";
+
+"calibration_title" = "Calibration";
+"calibration_message" = "Move the device in a figure 8 to calibrate the compass.\n\nYou can do this anytime you feel the compass accuracy is bad.";
+"calibration_dismiss" = "Done";
+
+"first_run" = "This service is accessible to people with disabilities\n\nGo to settings?";
+
+"settings_save" = "Save";
+
+"add_waypoints" = "Add Waypoint(s)";
+"waypoint_via" = "Via";
+
+"back" = "Back";
+
+"reset_app" = "In order to apply all the changes we have to force close the app and restart it manually";
+"reset_yes" = "Proceed";
+
+"start_preview_message" = "Route ready, accuracy around 3 meters";
+
+"take_me_there" = "Take me there";
+"nearest_parking" = "Nearest parking on route";
+"nearest_parking_selected" = "Remove parking on route";
+"show_route" = "Show route";
+"show_route_selected" = "Hide Route";
+
+"map_out_geofence_title" = "Warning";
+"map_out_geofence_message" = "You are in an unsupported area";
+"map_out_geofence_close" = "Close";
+
+"no_results" = "No result found";
+
+"show_more_detail" = "Tap to show more details";
