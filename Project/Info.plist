@@ -54,7 +54,7 @@
 	<key>ProximiioApiVersion</key>
 	<string>v5</string>
 	<key>ProximiioToken</key>
-	<string>***REMOVED***</string>
+	<string>REPLACE-ME</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
