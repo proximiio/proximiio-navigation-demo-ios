@@ -1,6 +1,6 @@
 PODS:
   - ActionPicker (0.1.0)
-  - Alamofire (5.4.2)
+  - Alamofire (5.4.3)
   - AlignedCollectionViewFlowLayout (1.1.2)
   - CheckboxButton (3.1.1)
   - Closures (0.7)
@@ -12,12 +12,12 @@ PODS:
   - DropDown (2.3.13)
   - DynamicBlurView (4.1.0)
   - Eureka (5.3.3)
-  - FLAnimatedImage (1.0.15)
+  - FLAnimatedImage (1.0.16)
   - GRMustache.swift (4.0.1)
   - Hex (6.1.0)
   - IndoorAtlas (3.4.4)
   - IQKeyboardManagerSwift (6.4.2)
-  - Kingfisher (6.2.1)
+  - Kingfisher (6.3.0)
   - LicensePlist (2.5.8)
   - Mapbox-iOS-SDK (5.9.0):
     - MapboxMobileEvents (= 0.10.2)
@@ -36,9 +36,11 @@ PODS:
     - Alamofire
     - GRMustache.swift
     - Mapbox-iOS-SDK (= 5.9.0)
+    - OpenCombine
+    - OpenCombineDispatch
     - Proximiio (= 5.1.0)
     - SwiftyJSON
-  - ProximiioProcessor (0.1.9):
+  - ProximiioProcessor (0.1.10):
     - Proximiio
     - SwiftyJSON
   - SDWebImage/Core (4.4.8)
@@ -73,13 +75,13 @@ DEPENDENCIES:
   - Periphery
   - PopupDialog (~> 1.1)
   - ProximiioMapbox (from `https://github.com/proximiio/proximiio-mapbox-ios-pod.git`, branch `maplibre`)
-  - ProximiioProcessor (= 0.1.9)
+  - ProximiioProcessor
   - SnapKit (~> 5.0.0)
   - SwiftLint
   - TapticEngine (from `https://github.com/matteocrippa/TapticEngine.git`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/CocoaPods/Specs:
     - ActionPicker
     - Alamofire
     - Closures
@@ -133,7 +135,7 @@ CHECKOUT OPTIONS:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
   ProximiioMapbox:
-    :commit: 6192e7b1260df352a4f728092e98d0bc457d0e4c
+    :commit: d03d26becba9cad2962ab046511b193c67340ba1
     :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
@@ -141,7 +143,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ActionPicker: 7add2007a310f1ebd728f5fe14732cc6d114ddf9
-  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   AlignedCollectionViewFlowLayout: bfbffc18e70d4f965b0e4044dea8502a38ff86b3
   CheckboxButton: 99f57944df0c2b58ba359f96e0d35f6443320cf9
   Closures: a83b9892a5b1c4125a9dfcd53e2754db5d7f6d22
@@ -151,12 +153,12 @@ SPEC CHECKSUMS:
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   Eureka: e6d720290c56bb23333ad1a0e020b2a98a0e9a43
-  FLAnimatedImage: dd3db277b17e909ec3c7fd41adfce79b321d960e
+  FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
-  IndoorAtlas: 84c0e0cec652838abcffcec73a3d1d1ae752a7bc
+  IndoorAtlas: 47a4f7d0b0329ed715ac7246a2baa4c32bc3789d
   IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
-  Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
   Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
@@ -165,8 +167,8 @@ SPEC CHECKSUMS:
   Periphery: ab7baf256e2e7b478d5ba1a4ca8812dc0ed76a8e
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Proximiio: baafad931a47d3c25bd099150b91b2d033ae7485
-  ProximiioMapbox: c1d826a27721c61b6bdbb0249ee6c4bb776eb444
-  ProximiioProcessor: 364dc8f48f87a516f5943c61bec1e1b7c7b75a5c
+  ProximiioMapbox: 769757532370d740add66808b751e304d6a1de4d
+  ProximiioProcessor: ffcf80e32ecf65ff694abf6d36a4723bb2f4ddc0
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 155ffeafc9ac102e5c9b68e3e9a1297a98a27096
@@ -174,6 +176,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 6fa54c46cff8cabf3503eb0edc978e8fd07a3c50
+PODFILE CHECKSUM: 37ebe72c9cfd94ffba6f5345a1b7fba437e7369d
 
 COCOAPODS: 1.10.1

@@ -9,7 +9,10 @@ inhibit_all_warnings!
 
 target 'Demo' do
   pod 'ProximiioMapbox', :git => 'https://github.com/proximiio/proximiio-mapbox-ios-pod.git', :branch => 'maplibre'
-  pod 'ProximiioProcessor', '0.1.9'
+  pod 'ProximiioProcessor'
+  
+  #pod 'ProximiioMapbox', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
+  #pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/processor'
 
   pod 'Alamofire'
   pod 'Eureka'
@@ -36,6 +39,7 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
+          config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] =  `uname -m`
           config.build_settings['SWIFT_VERSION'] = '5.3'
           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
           config.build_settings['ENABLE_BITCODE'] = 'NO'

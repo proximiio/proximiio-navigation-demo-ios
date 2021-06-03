@@ -105,12 +105,14 @@ class MapViewController: BaseViewController {
         }
         
     }
-    
+        
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         checkPerms()
+        
+        ProximiioMapbox.shared.say(text: "Welcome to Proximi.io Demo")
         
         // manage behaviour
         // force follow the path of current route
