@@ -111,9 +111,7 @@ class MapViewController: BaseViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         checkPerms()
-        
-        ProximiioMapbox.shared.say(text: "Welcome to Proximi.io Demo")
-        
+                
         // manage behaviour
         // force follow the path of current route
         ProximiioMapbox.shared.shakyHandsMode = Settings.shared.navigationType == .path
@@ -156,6 +154,8 @@ class MapViewController: BaseViewController {
         // pass information about simulate walk
         ProximiioMapbox.shared.debugShowDevelopmentRoutes = false
         ProximiioMapbox.shared.enableSimulationWalk(enabled: UserDefaults.standard.bool(forKey: Key.simulateWalk.rawValue))
+        
+        ProximiioMapbox.shared.say(text: "Welcome to Proximi.io Demo")
         
         // force disable idle
         UIApplication.shared.isIdleTimerDisabled = true
