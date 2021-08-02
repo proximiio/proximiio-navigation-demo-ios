@@ -284,7 +284,7 @@ extension MapOverlayHeader {
         if level >= 0 {
             level += 1
         }
-        let floorText = "floor".localized(level)
+        let floorText = "floor_\(level)".localized()
         return floorText
     }
 }

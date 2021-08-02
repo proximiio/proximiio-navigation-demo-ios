@@ -151,7 +151,7 @@ extension MapViewController: ProximiioMapboxInteraction {
         }
     }
 
-    func onTap(feature: ProximiioGeoJSON) {
+    func onTap(feature: ProximiioGeoJSON?) {
         // avoid that if route is running we can tap on poi
         guard currentRoute == nil else { return }
         self.showPreview(feature: feature)

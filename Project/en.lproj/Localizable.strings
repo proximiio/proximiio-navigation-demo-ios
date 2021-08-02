@@ -154,3 +154,8 @@
 "no_results" = "No result found";
 
 "show_more_detail" = "Tap to show more details";
+
+"floor_0" = "Ground Floor";
+"floor_1" = "Office Floor";
+"floor_2" = "Shops Floor";
+"floor_3" = "Custom localizable";

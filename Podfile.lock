@@ -15,7 +15,6 @@ PODS:
   - FLAnimatedImage (1.0.16)
   - GRMustache.swift (4.0.1)
   - Hex (6.1.0)
-  - IndoorAtlas (3.4.4)
   - IQKeyboardManagerSwift (6.4.2)
   - Kingfisher (6.3.0)
   - LicensePlist (2.5.8)
@@ -25,22 +24,21 @@ PODS:
   - OpenCombine (0.12.0)
   - OpenCombineDispatch (0.12.0):
     - OpenCombine (>= 0.10.2)
-  - Periphery (2.4.3)
+  - Periphery (2.8.1)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.1.0):
+  - Proximiio (5.2.0):
     - CrystDBCipher
     - DarklyEventSource
-    - IndoorAtlas
-  - ProximiioMapbox (5.1.1):
+  - ProximiioMapbox (5.1.2):
     - Alamofire
     - GRMustache.swift
     - Mapbox-iOS-SDK (= 5.9.0)
     - OpenCombine
     - OpenCombineDispatch
-    - Proximiio (= 5.1.0)
+    - Proximiio
     - SwiftyJSON
-  - ProximiioProcessor (0.1.10):
+  - ProximiioProcessor (0.1.15):
     - Proximiio
     - SwiftyJSON
   - SDWebImage/Core (4.4.8)
@@ -75,7 +73,7 @@ DEPENDENCIES:
   - Periphery
   - PopupDialog (~> 1.1)
   - ProximiioMapbox (from `https://github.com/proximiio/proximiio-mapbox-ios-pod.git`, branch `maplibre`)
-  - ProximiioProcessor
+  - ProximiioProcessor (from `https://github.com/proximiio/ProximiioProcessorPod.git`, tag `0.1.15`)
   - SnapKit (~> 5.0.0)
   - SwiftLint
   - TapticEngine (from `https://github.com/matteocrippa/TapticEngine.git`)
@@ -93,7 +91,6 @@ SPEC REPOS:
     - FLAnimatedImage
     - GRMustache.swift
     - Hex
-    - IndoorAtlas
     - IQKeyboardManagerSwift
     - Kingfisher
     - LicensePlist
@@ -104,7 +101,6 @@ SPEC REPOS:
     - Periphery
     - PopupDialog
     - Proximiio
-    - ProximiioProcessor
     - SDWebImage
     - SnapKit
     - SQLCipher
@@ -121,6 +117,9 @@ EXTERNAL SOURCES:
   ProximiioMapbox:
     :branch: maplibre
     :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
+  ProximiioProcessor:
+    :git: https://github.com/proximiio/ProximiioProcessorPod.git
+    :tag: 0.1.15
   TapticEngine:
     :git: https://github.com/matteocrippa/TapticEngine.git
 
@@ -135,8 +134,11 @@ CHECKOUT OPTIONS:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
   ProximiioMapbox:
-    :commit: d03d26becba9cad2962ab046511b193c67340ba1
+    :commit: 8953c7878a7a0a24db7930d87ad1eb5cc773190d
     :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
+  ProximiioProcessor:
+    :git: https://github.com/proximiio/ProximiioProcessorPod.git
+    :tag: 0.1.15
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
     :git: https://github.com/matteocrippa/TapticEngine.git
@@ -156,7 +158,6 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
-  IndoorAtlas: 47a4f7d0b0329ed715ac7246a2baa4c32bc3789d
   IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
@@ -164,11 +165,11 @@ SPEC CHECKSUMS:
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   OpenCombine: a8c52f249bc3c7e2bd5ffb75e8653e57a8e33d27
   OpenCombineDispatch: 68ed85ae5255d558a14434a802f65fb833b50d39
-  Periphery: ab7baf256e2e7b478d5ba1a4ca8812dc0ed76a8e
+  Periphery: 71f0fea815c57b71405cdb256daa0a9b1e453a5c
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: baafad931a47d3c25bd099150b91b2d033ae7485
-  ProximiioMapbox: 769757532370d740add66808b751e304d6a1de4d
-  ProximiioProcessor: ffcf80e32ecf65ff694abf6d36a4723bb2f4ddc0
+  Proximiio: 5621c2feb658cb863a57c66c8ff50bfb9bc3b974
+  ProximiioMapbox: 0600144bb99e44fd265025865a83c21e70de69af
+  ProximiioProcessor: ab165ab521560d971b2c0c32f9e42b68435cf292
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 155ffeafc9ac102e5c9b68e3e9a1297a98a27096
@@ -176,6 +177,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 37ebe72c9cfd94ffba6f5345a1b7fba437e7369d
+PODFILE CHECKSUM: 4a4a78037e46e8b00b315b616935d00bc8054c3b
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2

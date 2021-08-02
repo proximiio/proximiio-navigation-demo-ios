@@ -25,13 +25,9 @@ extension AppDelegate {
             
             // if boot up of proximiio went fine
             if state == kProximiioReady {
-                                
-                // force sync amenities
-                Proximiio.sharedInstance()?.syncAmenities({ _ in
-                    
-                    // and try sync features too
-                    Proximiio.sharedInstance()?.syncFeatures({ _ in
-                        
+                
+                Proximiio.sharedInstance()?.sync({ success in
+                    if success {
                         // force sync campus
                         // if all fine start extra stuffs
                         self.startProximiio()
@@ -41,9 +37,10 @@ extension AppDelegate {
                         
                         // preload images
                         self.preloadFeatureImages { _ in }
-                        
-                    })
+
+                    }
                 })
+                
             } else {
                 self.startProximiio()
                 
@@ -57,6 +54,8 @@ extension AppDelegate {
     private func startProximiio() {
         // add pdr processor
         pdrProcessor.useDeviceHeading = false
+        pdrProcessor.hiThreshold = 1.0
+        pdrProcessor.lowThreshold = 0.98
         ProximiioLocationManager.shared()?.addProcessor(pdrProcessor, avoidDuplicates: true)
         
         // add snap processors
