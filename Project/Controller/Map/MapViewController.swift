@@ -154,8 +154,17 @@ class MapViewController: BaseViewController {
         // pass information about simulate walk
         ProximiioMapbox.shared.debugShowDevelopmentRoutes = false
         ProximiioMapbox.shared.enableSimulationWalk(enabled: UserDefaults.standard.bool(forKey: Key.simulateWalk.rawValue))
-        
+
+        // Test custom read text
         ProximiioMapbox.shared.say(text: "Welcome to Proximi.io Demo")
+
+        // Inject custom floor names
+        ProximiioMapbox.shared.levelNameMapper = [
+            0: "A level that can be called ground",
+            1: "Office floor",
+            2: "Game room",
+            4: "Awesome custom name"
+        ]
         
         // force disable idle
         UIApplication.shared.isIdleTimerDisabled = true
