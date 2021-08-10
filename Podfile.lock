@@ -16,7 +16,7 @@ PODS:
   - GRMustache.swift (4.0.1)
   - Hex (6.1.0)
   - IQKeyboardManagerSwift (6.4.2)
-  - Kingfisher (6.3.0)
+  - Kingfisher (6.3.1)
   - LicensePlist (2.5.8)
   - Mapbox-iOS-SDK (5.9.0):
     - MapboxMobileEvents (= 0.10.2)
@@ -27,7 +27,7 @@ PODS:
   - Periphery (2.8.1)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.2.0):
+  - Proximiio (5.2.3):
     - CrystDBCipher
     - DarklyEventSource
   - ProximiioMapbox (5.1.2):
@@ -134,7 +134,7 @@ CHECKOUT OPTIONS:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
   ProximiioMapbox:
-    :commit: 8953c7878a7a0a24db7930d87ad1eb5cc773190d
+    :commit: d71e1ca8342f07534bb016c5fcea9bee1bcc088d
     :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   ProximiioProcessor:
     :git: https://github.com/proximiio/ProximiioProcessorPod.git
@@ -159,7 +159,7 @@ SPEC CHECKSUMS:
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
   IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
-  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
   Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
@@ -167,7 +167,7 @@ SPEC CHECKSUMS:
   OpenCombineDispatch: 68ed85ae5255d558a14434a802f65fb833b50d39
   Periphery: 71f0fea815c57b71405cdb256daa0a9b1e453a5c
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: 5621c2feb658cb863a57c66c8ff50bfb9bc3b974
+  Proximiio: 379250d8ca8c5ee551909d49955d815746628d55
   ProximiioMapbox: 0600144bb99e44fd265025865a83c21e70de69af
   ProximiioProcessor: ab165ab521560d971b2c0c32f9e42b68435cf292
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
@@ -177,6 +177,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 4a4a78037e46e8b00b315b616935d00bc8054c3b
+PODFILE CHECKSUM: ba4144ab85855d599a0eec141086468626243494
 
 COCOAPODS: 1.10.2
