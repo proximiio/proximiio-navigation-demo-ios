@@ -405,6 +405,14 @@ extension MapViewController: ProximiioDelegate {
         currentUserPosition = location.coordinate
         userOutOfPlace()
     }
+
+    func proximiioExitedGeofence(_ geofence: ProximiioGeofence!) {
+        print(geofence)
+    }
+
+    func proximiioEnteredGeofence(_ geofence: ProximiioGeofence!) {
+        print(geofence)
+    }
 }
 
 // MARK: - Subscribers
