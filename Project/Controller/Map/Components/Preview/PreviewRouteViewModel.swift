@@ -16,6 +16,5 @@ public class PreviewRouteViewModel {
     @Published public var feature: ProximiioGeoJSON?
     @Published public var showTrip: Bool = false
     @Published public var isFullView: Bool = false
-    @Published public var isViaParking: Bool = false
     @Published public var instructions: [PIORouteNode] = []
 }

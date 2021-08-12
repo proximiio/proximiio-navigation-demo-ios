@@ -35,7 +35,7 @@ class PreviewRouteDataSource: NSObject {
 extension PreviewRouteDataSource: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 9
+        return 8
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -133,19 +133,6 @@ extension PreviewRouteDataSource: UITableViewDataSource {
                 }
                 return cell
             }
-        case 8:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellNearRoute.identifier) as? PreviewCellNearRoute {
-                cell.buttonNearestParking.isSelected = isViaParking
-                cell.buttonNearestParking.onTap {
-                    guard let feature = self.feature else { return }
-                    self.action.send(.parking(feature))
-                }
-                cell.buttonShowRoute.isSelected = isShowTrip
-                cell.buttonShowRoute.onTap {
-                    self.action.send(.showTrip)
-                }
-                return cell
-            }
         default:
             return UITableViewCell()
         }
@@ -158,7 +145,6 @@ extension PreviewRouteDataSource {
     enum Action {
         case cancel
         case showTrip
-        case parking(ProximiioGeoJSON)
         case start(ProximiioGeoJSON, PIORoute?)
         case expand
     }

@@ -23,9 +23,9 @@ extension AppDelegate {
         // load keyboard
         loadKeyboardHandler()
 
-        // notifications
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (_, _) in
-        }
+        // Enable notifications
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (_, _) in
+//        }
     }
 }
 

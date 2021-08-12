@@ -38,8 +38,6 @@ class MapViewController: BaseViewController {
                     preview.snp.updateConstraints {
                         $0.height.equalTo(340)
                     }
-                case .parking(let feature, let parking):
-                    self?.showPreview(feature: feature, parking: parking)
                 case .cancel:
                     self?.previewCancel()
                 case .levelUpdate(let level):
@@ -205,7 +203,7 @@ class MapViewController: BaseViewController {
         self.mapView?.logoViewPosition = .bottomLeft
         self.mapView?.logoViewMargins = CGPoint(x: 20, y: 20)
         self.mapView?.attributionButtonPosition = .bottomRight
-        self.mapView?.setZoomLevel(16, animated: false)
+        self.mapView?.setZoomLevel(18, animated: false)
         if let mapView = mapView {
             ProximiioMapbox.shared.setup(mapView: mapView, configuration: config)
             ProximiioMapbox.shared.patchGroundLevel = 1
@@ -361,9 +359,7 @@ extension MapViewController {
 // MARK: - Map center to user
 extension MapViewController {
     @objc internal func centerAtUser(with zoom: Double = 18) {
-        
-        let isUserOutOfGeofence = userOutOfGeofence()
-        
+
         // check is user is out of geofence
         let coordinate = UserLocation.shared.coordinate
         
@@ -371,15 +367,8 @@ extension MapViewController {
         if let coordinate = coordinate {
             
             DispatchQueue.main.async {
-                // center user position
-                if !isUserOutOfGeofence {
-                    self.mapView?.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: {
-                        self.mapView?.setCenter(coordinate, zoomLevel: zoom, animated: true)
-                    })
-                } else {
-                    ProximiioMapbox.shared.followingUser = false
-                    self.mapView?.setCenter(coordinate, zoomLevel: 14, animated: true)
-                }
+                ProximiioMapbox.shared.followingUser = false
+                self.mapView?.setCenter(coordinate, zoomLevel: zoom, animated: true)
             }
             
             guard
@@ -403,15 +392,14 @@ extension MapViewController: ProximiioDelegate {
     
     func proximiioPositionUpdated(_ location: ProximiioLocation!) {
         currentUserPosition = location.coordinate
-        userOutOfPlace()
     }
 
     func proximiioExitedGeofence(_ geofence: ProximiioGeofence!) {
-        print(geofence)
+//        print(geofence)
     }
 
     func proximiioEnteredGeofence(_ geofence: ProximiioGeofence!) {
-        print(geofence)
+//        print(geofence)
     }
 }
 
@@ -460,7 +448,6 @@ extension MapViewController {
                 case .nearby(let nearby):
                     self?.showSearch(filter: nil, nearby: nearby)
                 case .routeStop:
-                    self?.hideAnnotations()
                     ProximiioMapbox.shared.routeCancel(silent: false)
                 }
             }.store(in: &subscriptions)
@@ -496,81 +483,6 @@ extension MapViewController {
     }
 }
 
-// MARK: - Check
-extension MapViewController {
-    
-    func userOutOfGeofence() -> Bool {
-        
-        return false
-        
-        // TODO: replace with geofence id
-//        let geofenceBig = "GEOFENCE-ID"
-//
-//        isOutOfGeofence = true
-//
-//        if let coordinate = UserLocation.shared.coordinate {
-//            Proximiio.sharedInstance()?.geofences().forEach {
-//                if $0.uuid == geofenceBig, $0.circularRegion()?.contains(coordinate) ?? false {
-//                    isOutOfGeofence = false
-//                }
-//            }
-//        }
-//
-//        if isOutOfGeofence {
-//
-//            let alert = UIAlertController(
-//                title: "map_out_geofence_title".localized(),
-//                message: "map_out_geofence_message".localized(),
-//                preferredStyle: .alert
-//            )
-//
-//            alert.addAction(UIAlertAction(title: "map_out_geofence_close".localized(), style: .destructive, handler: { (_) in
-//                alert.dismiss(animated: true, completion: nil)
-//                self.mapView?.showsUserLocation = false
-//            }))
-//
-//            DispatchQueue.main.async {
-//                self.present(alert, animated: true, completion: nil)
-//            }
-//        } else {
-//            DispatchQueue.main.async {
-//                self.mapView?.showsUserLocation = true
-//            }
-//        }
-//
-//        return isOutOfGeofence
-    }
-    
-    func userOutOfPlace() {
-        // TODO: replace with geofence id
-        let geofencePlace = "GEOFENCE-ID"
-        var isInside = false
-        if let coordinate = UserLocation.shared.coordinate {
-            if let geofence = Proximiio.sharedInstance()?.geofences()?.first(where: {
-                $0.uuid == geofencePlace
-            }) {
-                if
-                    geofence.isPolygon(),
-                    let feature = geofence.getPolygonAsFeature(),
-                    PIOTurf.inside(point: coordinate, poly: [feature.coordinates]) {
-                        isInside = true
-                }
-            }
-        }
-//        if !isInside {
-//            DispatchQueue.main.async { [weak self] in
-//                self?.zoomOutAndBiggerDot()
-//            }
-//        }
-    }
-    
-    private func zoomOutAndBiggerDot() {
-        let userAnnotation = self.mapView?.value(forKey: "userLocationAnnotationView") as? UIView
-        userAnnotation?.layer.transform = CATransform3DMakeScale(2, 2, 2)
-        self.centerAtUser(with: 16)
-    }
-}
-
 // MARK: - Update map
 extension MapViewController: MGLMapViewDelegate {
     
@@ -590,23 +502,6 @@ extension MapViewController: MGLMapViewDelegate {
     }
     
     public func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        
-        if let current = annotation as? ParkAnnotation, current.isParking {
-            
-            let identifier = "parkAnnotation"
-            
-            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            
-            if annotationView == nil {
-                annotationView = MGLAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                let imageView = UIImageView(image: current.image)
-                annotationView!.frame = CGRect(x: 0, y: 0, width: current.image.size.width, height: current.image.size.height)
-                annotationView?.addSubview(imageView)
-                annotationView?.centerOffset = CGVector(dx: -current.image.size.width / 5.0, dy: -current.image.size.height / 5.0)
-            }
-            
-            return annotationView
-        }
         
         if let current = annotation as? PIOAnnotation {
             

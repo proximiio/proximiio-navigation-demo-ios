@@ -46,13 +46,6 @@ class PreviewRoute: UIView {
                 self?.table.reloadData()
             }.store(in: &subscriptions)
         
-        viewModel.$isViaParking
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] isViaParking in
-                self?.dataSource.isViaParking = isViaParking
-                self?.table.reloadData()
-            }.store(in: &subscriptions)
-
         return viewModel
     }()
 
@@ -69,9 +62,6 @@ class PreviewRoute: UIView {
                     self.table.isScrollEnabled = true
                     self.viewModel.isFullView = true
                     self.action.send(.expand)
-                case .parking(let via):
-                    self.viewModel.isViaParking = !self.viewModel.isViaParking
-                    self.action.send(.parking(self.viewModel.feature, self.viewModel.isViaParking))
                 case .showTrip:
                     self.viewModel.showTrip = !self.viewModel.showTrip
                     self.table.isScrollEnabled = self.viewModel.showTrip
@@ -166,7 +156,6 @@ class PreviewRoute: UIView {
 extension PreviewRoute {
     enum Action {
         case start(ProximiioGeoJSON?, PIORoute?)
-        case parking(ProximiioGeoJSON?, Bool)
         case cancel
         case expand
         case levelUpdate(Int)
@@ -180,7 +169,6 @@ extension PreviewRoute {
         viewModel.showTrip = false
         viewModel.feature = nil
         viewModel.isFullView = false
-        viewModel.isViaParking = false
         table.setContentOffset(.zero, animated: false)
         table.isScrollEnabled = false
     }
