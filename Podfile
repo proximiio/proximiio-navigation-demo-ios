@@ -1,8 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/proximiio/proximiio-specs.git'
 platform :ios, '12.0'
-
-source 'https://github.com/CocoaPods/Specs.git'
-source 'git@github.com:proximiio/proximiio-specs.git'
 
 use_frameworks!
 inhibit_all_warnings!
@@ -10,11 +8,11 @@ inhibit_all_warnings!
 target 'Demo' do
   #pod 'ProximiioMapbox', '5.1.11'
 
-#    pod 'ProximiioMapbox', :git => 'https://github.com/proximiio/proximiio-mapbox-ios-pod.git', :branch => 'maplibre'
+  pod 'ProximiioMapbox', :git => 'https://github.com/proximiio/proximiio-mapbox-ios-pod.git', :branch => 'maplibre'
   pod 'ProximiioProcessor', :git => 'https://github.com/proximiio/ProximiioProcessorPod.git', :tag => '0.1.15'
 
 #  pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/Proximiio/Proximiio.podspec'
-  pod 'ProximiioMapbox', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
+# pod 'ProximiioMapbox', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
 # pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/processor'
 
   pod 'Alamofire'
