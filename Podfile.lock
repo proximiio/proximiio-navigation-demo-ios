@@ -38,7 +38,7 @@ PODS:
     - OpenCombineDispatch
     - Proximiio
     - SwiftyJSON
-  - ProximiioProcessor (0.1.15):
+  - ProximiioProcessor (0.1.16):
     - Proximiio
     - SwiftyJSON
   - SDWebImage/Core (4.4.8)
@@ -73,7 +73,7 @@ DEPENDENCIES:
   - Periphery
   - PopupDialog (~> 1.1)
   - ProximiioMapbox (from `https://github.com/proximiio/proximiio-mapbox-ios-pod.git`, branch `maplibre`)
-  - ProximiioProcessor (from `https://github.com/proximiio/ProximiioProcessorPod.git`, tag `0.1.15`)
+  - ProximiioProcessor (from `https://github.com/proximiio/ProximiioProcessorPod.git`, tag `0.1.16`)
   - SnapKit (~> 5.0.0)
   - SwiftLint
   - TapticEngine (from `https://github.com/matteocrippa/TapticEngine.git`)
@@ -120,7 +120,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   ProximiioProcessor:
     :git: https://github.com/proximiio/ProximiioProcessorPod.git
-    :tag: 0.1.15
+    :tag: 0.1.16
   TapticEngine:
     :git: https://github.com/matteocrippa/TapticEngine.git
 
@@ -139,7 +139,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   ProximiioProcessor:
     :git: https://github.com/proximiio/ProximiioProcessorPod.git
-    :tag: 0.1.15
+    :tag: 0.1.16
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
     :git: https://github.com/matteocrippa/TapticEngine.git
@@ -170,7 +170,7 @@ SPEC CHECKSUMS:
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Proximiio: 87b251686bb0613648aa613c058e1e3805703050
   ProximiioMapbox: 4b1e97ea5447441a31f31e2ad8dcc4e541b28772
-  ProximiioProcessor: ab165ab521560d971b2c0c32f9e42b68435cf292
+  ProximiioProcessor: 98bbdefa2751c88605f7df4c3c870cf52eea1cf1
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 155ffeafc9ac102e5c9b68e3e9a1297a98a27096
@@ -178,6 +178,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 01da1bdc45d0259f1a2c9f81cbeb283c8cb8099e
+PODFILE CHECKSUM: 45f225775aa6bbe1d4e37670a5dfa26e16f2c8fb
 
 COCOAPODS: 1.10.2
