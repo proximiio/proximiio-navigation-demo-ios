@@ -27,7 +27,7 @@ PODS:
   - Periphery (2.8.1)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.2.4):
+  - Proximiio (5.2.5):
     - CrystDBCipher
     - DarklyEventSource
   - ProximiioMapbox (5.1.4):
@@ -168,7 +168,7 @@ SPEC CHECKSUMS:
   OpenCombineDispatch: 68ed85ae5255d558a14434a802f65fb833b50d39
   Periphery: 71f0fea815c57b71405cdb256daa0a9b1e453a5c
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: d0e952e9c23682ba7ebad4d0824168d430af9994
+  Proximiio: 87b251686bb0613648aa613c058e1e3805703050
   ProximiioMapbox: 4b1e97ea5447441a31f31e2ad8dcc4e541b28772
   ProximiioProcessor: ab165ab521560d971b2c0c32f9e42b68435cf292
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
