@@ -163,7 +163,25 @@ class MapViewController: BaseViewController {
             2: "Game room",
             4: "Awesome custom name"
         ]
-        
+
+        // Tweak thresholds
+
+        // Those values allows you to adjust the experience and fine tune it to your unique setup.
+        // Here below is shown how to tweak those values, suggestion is to make a few session of
+        // try and test to fine tune them.
+
+        // Default value 5.0 meters, if you decrease you will get this information the latest
+        // If you increase you will get the information much early
+        // In this case we will tweak to have it a bit early ~8.0 meters from the event
+        ProximiioMapbox.shared.navigation?.setStepPreparationThreshold(inMeters: 8.0)
+
+        // We also anticipate of 0.5 meter the default value of 2.5 meters
+        ProximiioMapbox.shared.navigation?.setStepImmediateThreshold(inMeters: 3.0)
+
+        // Finally we can tweak also the distance for a "Soon" (aka very close) event for TTS
+        // In this case we lowered down of 1 meter (so it will be said out late compared to default)
+        ProximiioMapbox.shared.navigation?.ttsSoonUpdateThreshold(thresholdMeters: 4.0)
+
         // force disable idle
         UIApplication.shared.isIdleTimerDisabled = true
     }
