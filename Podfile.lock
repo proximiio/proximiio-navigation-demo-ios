@@ -21,23 +21,18 @@ PODS:
   - MapboxMobileEvents (0.10.2)
   - MapLibre (5.12.0):
     - MapboxMobileEvents (= 0.10.2)
-  - OpenCombine (0.12.0)
-  - OpenCombineDispatch (0.12.0):
-    - OpenCombine (>= 0.10.2)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.1.5):
+  - Proximiio (5.2.9):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapbox (0.2.5):
+  - ProximiioMapbox (5.1.12-maplibre):
     - Alamofire
     - GRMustache.swift
-    - MapLibre (= 5.12.0)
-    - OpenCombine
-    - OpenCombineDispatch
+    - MapLibre
     - Proximiio
     - SwiftyJSON
-  - ProximiioProcessor (0.1.1):
+  - ProximiioProcessor (0.1.19):
     - Proximiio
     - SwiftyJSON
   - SDWebImage/Core (4.4.8)
@@ -68,9 +63,8 @@ DEPENDENCIES:
   - Kingfisher
   - LicensePlist (~> 2.5.8)
   - PopupDialog (~> 1.1)
-  - Proximiio (from `~/Repositories/Proximiio/proximiio-ios-sdk/`)
-  - ProximiioMapbox (from `~/Repositories/Proximiio/proximiio-mapbox-ios/`)
-  - ProximiioProcessor (from `~/Repositories/Proximiio/ProximiioProcessor/`)
+  - ProximiioMapbox (from `https://github.com/proximiio/proximiio-mapbox-ios-pod.git`, branch `maplibre`)
+  - ProximiioProcessor
   - SnapKit (~> 5.0.0)
   - SwiftLint
   - TapticEngine (from `https://github.com/matteocrippa/TapticEngine.git`)
@@ -92,9 +86,9 @@ SPEC REPOS:
     - Kingfisher
     - LicensePlist
     - MapboxMobileEvents
-    - OpenCombine
-    - OpenCombineDispatch
     - PopupDialog
+    - Proximiio
+    - ProximiioProcessor
     - SDWebImage
     - SnapKit
     - SQLCipher
@@ -110,12 +104,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/matteocrippa/CheckboxButton.git
   DKCarouselView:
     :git: https://github.com/matteocrippa/DKCarouselView.git
-  Proximiio:
-    :path: "~/Repositories/Proximiio/proximiio-ios-sdk/"
   ProximiioMapbox:
-    :path: "~/Repositories/Proximiio/proximiio-mapbox-ios/"
-  ProximiioProcessor:
-    :path: "~/Repositories/Proximiio/ProximiioProcessor/"
+    :branch: maplibre
+    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   TapticEngine:
     :git: https://github.com/matteocrippa/TapticEngine.git
 
@@ -129,6 +120,9 @@ CHECKOUT OPTIONS:
   DKCarouselView:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
+  ProximiioMapbox:
+    :commit: 051a4ddc5aede60dd6f50bdc0c2485dea072100f
+    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
     :git: https://github.com/matteocrippa/TapticEngine.git
@@ -153,12 +147,10 @@ SPEC CHECKSUMS:
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   MapLibre: 48a18e037e429c010093cdae25a5bcc4aed9dacb
-  OpenCombine: a8c52f249bc3c7e2bd5ffb75e8653e57a8e33d27
-  OpenCombineDispatch: 68ed85ae5255d558a14434a802f65fb833b50d39
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: 69b0c677fa07faf9a5c2c07ec400839298da0d0d
-  ProximiioMapbox: 92f873cf1374f6c4ad0a5e08997faa25ee688eb5
-  ProximiioProcessor: d15e32fb0788c7d3b573f60017dfb57a4f9ecbe9
+  Proximiio: 9aa6b638cdf215e2ea1710f46ec1503628bbddf7
+  ProximiioMapbox: 7d9cd8743a8ec556527a30117564e09c63203374
+  ProximiioProcessor: 3fe208586c84128487d158cf28b69dceee7b62a8
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 155ffeafc9ac102e5c9b68e3e9a1297a98a27096
@@ -166,6 +158,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: fd9b9aa64f422a79a377db5370f7f25db8201fd1
+PODFILE CHECKSUM: 51aaf7078ab051b9310481d1e445cd3de08ca0e0
 
 COCOAPODS: 1.11.2
