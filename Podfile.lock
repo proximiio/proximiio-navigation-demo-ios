@@ -1,10 +1,10 @@
 PODS:
   - ActionPicker (0.1.0)
-  - Alamofire (5.4.3)
+  - Alamofire (5.4.4)
   - AlignedCollectionViewFlowLayout (1.1.2)
   - CheckboxButton (3.1.1)
   - Closures (0.7)
-  - CrystDBCipher (0.1.10):
+  - CrystDBCipher (0.1.11):
     - SQLCipher
   - DarklyEventSource (4.1.1)
   - DKCarouselView (1.5):
@@ -16,7 +16,7 @@ PODS:
   - GRMustache.swift (4.0.1)
   - Hex (6.1.0)
   - IQKeyboardManagerSwift (6.4.2)
-  - Kingfisher (6.3.1)
+  - Kingfisher (7.0.0)
   - LicensePlist (2.5.8)
   - MapboxMobileEvents (0.10.2)
   - MapLibre (5.12.0):
@@ -24,21 +24,20 @@ PODS:
   - OpenCombine (0.12.0)
   - OpenCombineDispatch (0.12.0):
     - OpenCombine (>= 0.10.2)
-  - Periphery (2.8.1)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.2.5):
+  - Proximiio (5.1.5):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapbox (5.1.4):
+  - ProximiioMapbox (0.2.5):
     - Alamofire
     - GRMustache.swift
-    - MapLibre
+    - MapLibre (= 5.12.0)
     - OpenCombine
     - OpenCombineDispatch
     - Proximiio
     - SwiftyJSON
-  - ProximiioProcessor (0.1.16):
+  - ProximiioProcessor (0.1.1):
     - Proximiio
     - SwiftyJSON
   - SDWebImage/Core (4.4.8)
@@ -51,7 +50,7 @@ PODS:
   - SQLCipher/common (4.4.3)
   - SQLCipher/standard (4.4.3):
     - SQLCipher/common
-  - SwiftLint (0.43.1)
+  - SwiftLint (0.44.0)
   - SwiftyJSON (5.0.1)
   - TapticEngine (1.2.0)
 
@@ -68,12 +67,10 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.4.1)
   - Kingfisher
   - LicensePlist (~> 2.5.8)
-  - OpenCombine
-  - OpenCombineDispatch
-  - Periphery
   - PopupDialog (~> 1.1)
-  - ProximiioMapbox (from `https://github.com/proximiio/proximiio-mapbox-ios-pod.git`, branch `maplibre`)
-  - ProximiioProcessor (from `https://github.com/proximiio/ProximiioProcessorPod.git`, tag `0.1.16`)
+  - Proximiio (from `~/Repositories/Proximiio/proximiio-ios-sdk/`)
+  - ProximiioMapbox (from `~/Repositories/Proximiio/proximiio-mapbox-ios/`)
+  - ProximiioProcessor (from `~/Repositories/Proximiio/ProximiioProcessor/`)
   - SnapKit (~> 5.0.0)
   - SwiftLint
   - TapticEngine (from `https://github.com/matteocrippa/TapticEngine.git`)
@@ -97,9 +94,7 @@ SPEC REPOS:
     - MapboxMobileEvents
     - OpenCombine
     - OpenCombineDispatch
-    - Periphery
     - PopupDialog
-    - Proximiio
     - SDWebImage
     - SnapKit
     - SQLCipher
@@ -115,12 +110,12 @@ EXTERNAL SOURCES:
     :git: https://github.com/matteocrippa/CheckboxButton.git
   DKCarouselView:
     :git: https://github.com/matteocrippa/DKCarouselView.git
+  Proximiio:
+    :path: "~/Repositories/Proximiio/proximiio-ios-sdk/"
   ProximiioMapbox:
-    :branch: maplibre
-    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
+    :path: "~/Repositories/Proximiio/proximiio-mapbox-ios/"
   ProximiioProcessor:
-    :git: https://github.com/proximiio/ProximiioProcessorPod.git
-    :tag: 0.1.16
+    :path: "~/Repositories/Proximiio/ProximiioProcessor/"
   TapticEngine:
     :git: https://github.com/matteocrippa/TapticEngine.git
 
@@ -134,23 +129,17 @@ CHECKOUT OPTIONS:
   DKCarouselView:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
-  ProximiioMapbox:
-    :commit: 24d2ee0aac7b9cd8243c4d13536b28bd09b74e06
-    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
-  ProximiioProcessor:
-    :git: https://github.com/proximiio/ProximiioProcessorPod.git
-    :tag: 0.1.16
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
     :git: https://github.com/matteocrippa/TapticEngine.git
 
 SPEC CHECKSUMS:
   ActionPicker: 7add2007a310f1ebd728f5fe14732cc6d114ddf9
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AlignedCollectionViewFlowLayout: bfbffc18e70d4f965b0e4044dea8502a38ff86b3
   CheckboxButton: 99f57944df0c2b58ba359f96e0d35f6443320cf9
   Closures: a83b9892a5b1c4125a9dfcd53e2754db5d7f6d22
-  CrystDBCipher: 1aa65c16eac9086ec4924d3e231be73b7c8594cf
+  CrystDBCipher: 0b2f8e78df7a6f373c384a1671f8efd54af16974
   DarklyEventSource: 6df384dcdb211d2b6bfbbe93a3148bd25567dd61
   DKCarouselView: 6229f8974d357a679bdd2b2e8f1e00eedb117249
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
@@ -160,24 +149,23 @@ SPEC CHECKSUMS:
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
   IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
-  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   MapLibre: 48a18e037e429c010093cdae25a5bcc4aed9dacb
   OpenCombine: a8c52f249bc3c7e2bd5ffb75e8653e57a8e33d27
   OpenCombineDispatch: 68ed85ae5255d558a14434a802f65fb833b50d39
-  Periphery: 71f0fea815c57b71405cdb256daa0a9b1e453a5c
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: 87b251686bb0613648aa613c058e1e3805703050
-  ProximiioMapbox: 4b1e97ea5447441a31f31e2ad8dcc4e541b28772
-  ProximiioProcessor: 98bbdefa2751c88605f7df4c3c870cf52eea1cf1
+  Proximiio: 69b0c677fa07faf9a5c2c07ec400839298da0d0d
+  ProximiioMapbox: 92f873cf1374f6c4ad0a5e08997faa25ee688eb5
+  ProximiioProcessor: d15e32fb0788c7d3b573f60017dfb57a4f9ecbe9
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 155ffeafc9ac102e5c9b68e3e9a1297a98a27096
-  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 45f225775aa6bbe1d4e37670a5dfa26e16f2c8fb
+PODFILE CHECKSUM: fd9b9aa64f422a79a377db5370f7f25db8201fd1
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2

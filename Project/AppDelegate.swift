@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appController: UIViewController?
 
     // proximiio processors
-    let pdrProcessor = ProximiioPDRProcessor()
-    let snapProcessor = ProximiioSnapProcessor()
+    let simulationProcessor = ProximiioSimulationProcessor()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Proximiio setup

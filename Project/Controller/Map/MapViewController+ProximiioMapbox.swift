@@ -39,7 +39,7 @@ extension MapViewController: ProximiioMapboxNavigation {
             if  let route = self?.currentRoute,
                 let app = UIApplication.shared.delegate as? AppDelegate,
                 let path = self?.calculatePathPdr(route: route) {
-                app.snapProcessor.navigationRouteSet(path)
+                app.simulationProcessor.set(routes: path)
             }
         }
 
@@ -63,7 +63,7 @@ extension MapViewController: ProximiioMapboxNavigation {
                 self.setFloor(floor: floor)
                 self.currentRoute = nil
                 if let app = UIApplication.shared.delegate as? AppDelegate {
-                    app.snapProcessor.navigationRouteDrop()
+                    app.simulationProcessor.set(routes: [])
                 }
                 self.hideAnnotations()
             }
@@ -100,11 +100,7 @@ extension MapViewController: ProximiioMapboxNavigation {
 
     func onPositionUpdate(_ position: CLLocationCoordinate2D) {}
 
-    func onHeadingUpdate(_ heading: Double) {
-        if let application = UIApplication.shared.delegate as? AppDelegate {
-            application.pdrProcessor.customHeading = heading
-        }
-    }
+    func onHeadingUpdate(_ heading: Double) {}
 
     func onTTS() {
         if Settings.shared.vibrationEnabled {
@@ -123,10 +119,10 @@ extension MapViewController: ProximiioMapboxInteraction {
     func change(floor: Int) {
         self.changeFloor(floor)
 
-        // set pdr
+        // set processor
         if  let route = currentRoute,
             let app = UIApplication.shared.delegate as? AppDelegate {
-            app.snapProcessor.navigationRouteSet(calculatePathPdr(route: route))
+            app.simulationProcessor.set(routes: calculatePathPdr(route: route))
             self.currentRoute = route
         }
     }

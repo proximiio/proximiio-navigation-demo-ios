@@ -52,15 +52,18 @@ extension AppDelegate {
     }
     
     private func startProximiio() {
-        // add pdr processor
-        pdrProcessor.useDeviceHeading = false
-        pdrProcessor.hiThreshold = 1.0
-        pdrProcessor.lowThreshold = 0.98
-        ProximiioLocationManager.shared()?.addProcessor(pdrProcessor, avoidDuplicates: true)
-        
-        // add snap processors
-        snapProcessor.threshold = 8.0
-        ProximiioLocationManager.shared()?.addProcessor(snapProcessor, avoidDuplicates: false)
+//        // add pdr processor
+//        pdrProcessor.useDeviceHeading = false
+//        pdrProcessor.hiThreshold = 1.0
+//        pdrProcessor.lowThreshold = 0.98
+//        ProximiioLocationManager.shared()?.addProcessor(pdrProcessor, avoidDuplicates: true)
+//
+//        // add snap processors
+//        snapProcessor.threshold = 8.0
+//        ProximiioLocationManager.shared()?.addProcessor(snapProcessor, avoidDuplicates: false)
+
+        // simulation processor
+        ProximiioLocationManager.shared()?.addProcessor(simulationProcessor, avoidDuplicates: true)
         
         // startup proximiio
         Proximiio.sharedInstance()?.enable()
