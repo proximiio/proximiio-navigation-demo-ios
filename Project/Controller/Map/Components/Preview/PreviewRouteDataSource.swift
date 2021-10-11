@@ -16,12 +16,10 @@ class PreviewRouteDataSource: NSObject {
     public var action = PassthroughSubject<Action, Never>()
     public var route: PIORoute? {
         didSet {
-            instructions = route?.nodeList.filter({
-                return !$0.direction.isLevelChangeExit()
-            }) ?? []
+            instructions = route?.nodeList ?? []
         }
     }
-    public var isFullView = false 
+    public var isFullView = false
     public var isShowTrip = false
     public var isViaParking = false
     public var waypoints: [PIOWaypoint] = []
@@ -35,7 +33,7 @@ class PreviewRouteDataSource: NSObject {
 extension PreviewRouteDataSource: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 8
+        return 9
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +43,7 @@ extension PreviewRouteDataSource: UITableViewDataSource {
         let hasDescription = (feature?.jsonValue?["properties"]["metadata"]["description"][Locale.current.languageCode ?? "en"].string != nil) ? 1 : 0
 
         let hasDetails = (hasOpening == 1 || hasLink == 1 || hasImages == 1 || hasDescription == 1) ? 1 :0
-        
+
         switch section {
         case 0:
             return isFullView ? hasImages : 0
@@ -58,7 +56,7 @@ extension PreviewRouteDataSource: UITableViewDataSource {
         case 5:
             return isFullView ? hasLink : 0
         case 6:
-            return isShowTrip ? route?.summary.count ?? 0 : 0
+            return isShowTrip ? instructions.count : 0
         default:
             return 1
         }
@@ -66,19 +64,19 @@ extension PreviewRouteDataSource: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        
+
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellGallery.identifier) as? PreviewCellGallery {
                 cell.populate(images: feature?.images ?? [])
                 return cell
             }
-            
+
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellStats.identifier) as? PreviewCellStats {
                 let distance = route?.nodeList.reduce(0.0) { (acc, feature) -> Double in
                     return acc + feature.distanceFromLastNode
                 } ?? 0
-                
+
                 cell.populate(
                     name: feature?.getTitle(),
                     description: feature?.floorReadable,
@@ -86,7 +84,7 @@ extension PreviewRouteDataSource: UITableViewDataSource {
                 cell.selectionStyle = .none
                 return cell
             }
-            
+
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellShowDetail.identifier) as? PreviewCellShowDetail {
                 cell.buttonShoMoreDetail.onTap { [weak self] in
@@ -94,7 +92,7 @@ extension PreviewRouteDataSource: UITableViewDataSource {
                 }
                 return cell
             }
-            
+
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellDescription.identifier) as? PreviewCellDescription {
                 cell.populate(
@@ -102,7 +100,7 @@ extension PreviewRouteDataSource: UITableViewDataSource {
                 )
                 return cell
             }
-            
+
         case 4:
             if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellTimetable.identifier) as? PreviewCellTimetable {
                 let weekDay = Date.todayDayOfWeek
@@ -111,7 +109,7 @@ extension PreviewRouteDataSource: UITableViewDataSource {
                 }
                 return cell
             }
-            
+
         case 5:
             if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellLink.identifier) as? PreviewCellLink {
                 cell.populate(link: feature?.jsonValue?["properties"]["metadata"]["link"])
@@ -133,6 +131,19 @@ extension PreviewRouteDataSource: UITableViewDataSource {
                 }
                 return cell
             }
+        case 8:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCellNearRoute.identifier) as? PreviewCellNearRoute {
+                cell.buttonNearestParking.isSelected = isViaParking
+                cell.buttonNearestParking.onTap {
+                    guard let feature = self.feature else { return }
+                    self.action.send(.parking(feature))
+                }
+                cell.buttonShowRoute.isSelected = isShowTrip
+                cell.buttonShowRoute.onTap {
+                    self.action.send(.showTrip)
+                }
+                return cell
+            }
         default:
             return UITableViewCell()
         }
@@ -145,6 +156,7 @@ extension PreviewRouteDataSource {
     enum Action {
         case cancel
         case showTrip
+        case parking(ProximiioGeoJSON)
         case start(ProximiioGeoJSON, PIORoute?)
         case expand
     }

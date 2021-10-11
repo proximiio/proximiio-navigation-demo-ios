@@ -11,7 +11,7 @@ PODS:
     - SDWebImage/GIF (~> 4.1)
   - DropDown (2.3.13)
   - DynamicBlurView (4.1.0)
-  - Eureka (5.3.3)
+  - Eureka (5.3.4)
   - FLAnimatedImage (1.0.16)
   - GRMustache.swift (4.0.1)
   - Hex (6.1.0)
@@ -23,10 +23,10 @@ PODS:
     - MapboxMobileEvents (= 0.10.2)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.2.9):
+  - Proximiio (5.2.10):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapbox (5.1.12-maplibre):
+  - ProximiioMapbox (5.1.13-maplibre):
     - Alamofire
     - GRMustache.swift
     - MapLibre
@@ -121,7 +121,7 @@ CHECKOUT OPTIONS:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
   ProximiioMapbox:
-    :commit: 051a4ddc5aede60dd6f50bdc0c2485dea072100f
+    :commit: 3d3261b92edcc34de211d07e4a7b4ac1ba499188
     :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
@@ -138,7 +138,7 @@ SPEC CHECKSUMS:
   DKCarouselView: 6229f8974d357a679bdd2b2e8f1e00eedb117249
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
-  Eureka: e6d720290c56bb23333ad1a0e020b2a98a0e9a43
+  Eureka: 60cf058f86a8fb3ed26165ba5292b9850361b0a6
   FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
@@ -148,8 +148,8 @@ SPEC CHECKSUMS:
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   MapLibre: 48a18e037e429c010093cdae25a5bcc4aed9dacb
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: 9aa6b638cdf215e2ea1710f46ec1503628bbddf7
-  ProximiioMapbox: 7d9cd8743a8ec556527a30117564e09c63203374
+  Proximiio: 3c3e1f2a5cfd4676241b4ab2846f486f4527b385
+  ProximiioMapbox: b0f118c68216e4376dfb229ba1db17be7650923f
   ProximiioProcessor: 3fe208586c84128487d158cf28b69dceee7b62a8
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb

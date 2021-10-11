@@ -158,9 +158,9 @@ class MapViewController: BaseViewController {
 
         // Inject custom floor names
         ProximiioMapbox.shared.levelNameMapper = [
-            0: "A level that can be called ground",
-            1: "Office floor",
-            2: "Game room",
+            1: "A level that can be called ground",
+            2: "Office floor",
+            3: "Game room",
             4: "Awesome custom name"
         ]
 

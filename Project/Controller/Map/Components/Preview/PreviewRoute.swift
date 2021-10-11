@@ -71,6 +71,7 @@ class PreviewRoute: UIView {
                 case .start(let feature, let route):
                     self.table.isScrollEnabled = false
                     self.action.send(.start(feature, route))
+                default: break
                 }
             }.store(in: &subscriptions)
         return dataSource
