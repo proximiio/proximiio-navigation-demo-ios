@@ -16,7 +16,7 @@ PODS:
   - GRMustache.swift (4.0.1)
   - Hex (6.1.0)
   - IQKeyboardManagerSwift (6.4.2)
-  - Kingfisher (7.0.0)
+  - Kingfisher (7.1.1)
   - LicensePlist (2.5.8)
   - MapboxMobileEvents (0.10.2)
   - MapLibre (5.12.0):
@@ -32,7 +32,7 @@ PODS:
     - MapLibre
     - Proximiio
     - SwiftyJSON
-  - ProximiioProcessor (0.1.19):
+  - ProximiioProcessor (0.1.20):
     - Proximiio
     - SwiftyJSON
   - SDWebImage/Core (4.4.8)
@@ -143,14 +143,14 @@ SPEC CHECKSUMS:
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
   IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
-  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
+  Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   MapLibre: 48a18e037e429c010093cdae25a5bcc4aed9dacb
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Proximiio: 3c3e1f2a5cfd4676241b4ab2846f486f4527b385
   ProximiioMapbox: b0f118c68216e4376dfb229ba1db17be7650923f
-  ProximiioProcessor: 3fe208586c84128487d158cf28b69dceee7b62a8
+  ProximiioProcessor: 1d03b85f4bee2524d4489389864e34f39a06cee4
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 155ffeafc9ac102e5c9b68e3e9a1297a98a27096
@@ -158,6 +158,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 51aaf7078ab051b9310481d1e445cd3de08ca0e0
+PODFILE CHECKSUM: 1caff1e764d7d48793f6db557b658fa9293e2bb7
 
 COCOAPODS: 1.11.2

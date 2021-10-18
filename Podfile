@@ -16,7 +16,7 @@ target 'Demo' do
 
 #  pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
 #  pod 'ProximiioMapbox', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
-#  pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
+  #pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
 
   pod 'Alamofire'
   pod 'Eureka'
