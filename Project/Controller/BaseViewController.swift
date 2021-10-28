@@ -31,10 +31,15 @@ class BaseViewController: UIViewController {
 extension BaseViewController {
 
     private func styleNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+
         navigationController?.navigationBar.barTintColor = Theme.white.value
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.isOpaque = true
         navigationController?.navigationBar.tintColor = Theme.blueDarker.value
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
 
         let logo = UIImageView()
         logo.backgroundColor = Theme.white.value
