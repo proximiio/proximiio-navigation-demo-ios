@@ -18,18 +18,18 @@ PODS:
   - IQKeyboardManagerSwift (6.4.2)
   - Kingfisher (7.1.1)
   - LicensePlist (2.5.8)
-  - Mapbox-iOS-SDK (5.9.0):
-    - MapboxMobileEvents (= 0.10.2)
   - MapboxMobileEvents (0.10.2)
+  - MapLibre (5.12.0):
+    - MapboxMobileEvents (= 0.10.2)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - Proximiio (5.2.11):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapbox (5.1.18):
+  - ProximiioMapbox (5.1.14-maplibre):
     - Alamofire
     - GRMustache.swift
-    - Mapbox-iOS-SDK (= 5.9.0)
+    - MapLibre
     - Proximiio
     - SwiftyJSON
   - ProximiioProcessor (0.1.21):
@@ -63,7 +63,7 @@ DEPENDENCIES:
   - Kingfisher
   - LicensePlist (~> 2.5.8)
   - PopupDialog (~> 1.1)
-  - ProximiioMapbox
+  - ProximiioMapbox (from `https://github.com/proximiio/proximiio-mapbox-ios-pod.git`, branch `maplibre`)
   - ProximiioProcessor
   - SnapKit (~> 5.0.0)
   - SwiftLint
@@ -85,17 +85,17 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - LicensePlist
-    - Mapbox-iOS-SDK
     - MapboxMobileEvents
     - PopupDialog
     - Proximiio
-    - ProximiioMapbox
     - ProximiioProcessor
     - SDWebImage
     - SnapKit
     - SQLCipher
     - SwiftLint
     - SwiftyJSON
+  https://github.com/proximiio/proximiio-specs.git:
+    - MapLibre
 
 EXTERNAL SOURCES:
   AlignedCollectionViewFlowLayout:
@@ -104,6 +104,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/matteocrippa/CheckboxButton.git
   DKCarouselView:
     :git: https://github.com/matteocrippa/DKCarouselView.git
+  ProximiioMapbox:
+    :branch: maplibre
+    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   TapticEngine:
     :git: https://github.com/matteocrippa/TapticEngine.git
 
@@ -117,6 +120,9 @@ CHECKOUT OPTIONS:
   DKCarouselView:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
+  ProximiioMapbox:
+    :commit: 356cbecff7a8fc0fa83243199ceafdd7f5b15604
+    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
     :git: https://github.com/matteocrippa/TapticEngine.git
@@ -139,11 +145,11 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
-  Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+  MapLibre: 48a18e037e429c010093cdae25a5bcc4aed9dacb
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Proximiio: 826c383a743e4e8beb21281252d6deaeb586efe8
-  ProximiioMapbox: c6e1ec727ba5c058d4b3751b2fe8cfeb4ff7aec6
+  ProximiioMapbox: 2942686434245a3cea39aa2dc4956438f2485987
   ProximiioProcessor: 6bca6d18137fb863f14e784ec721def51a5513cb
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
@@ -152,6 +158,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 4afa792cbeca173df9f619397ab2f97549efb1d6
+PODFILE CHECKSUM: 95c03c3ab393b9b7f9cff06e1156b240a599a789
 
 COCOAPODS: 1.11.2
