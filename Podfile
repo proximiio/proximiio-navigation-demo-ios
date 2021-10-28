@@ -8,14 +8,14 @@ inhibit_all_warnings!
 target 'Demo' do
   #pod 'ProximiioMapbox', '5.1.11'
 
-  #pod 'ProximiioMapbox'
+  pod 'ProximiioMapbox'
   pod 'ProximiioProcessor'
 
-  pod 'ProximiioMapbox', :git => 'https://github.com/proximiio/proximiio-mapbox-ios-pod.git', :branch => 'maplibre'
+  #pod 'ProximiioMapbox', :git => 'https://github.com/proximiio/proximiio-mapbox-ios-pod.git', :branch => 'maplibre'
   #pod 'ProximiioProcessor', :git => 'https://github.com/proximiio/ProximiioProcessorPod.git', :tag => '0.1.16'
 
-#  pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
-#  pod 'ProximiioMapbox', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
+  #pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
+  #pod 'ProximiioMapbox', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
   #pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
 
   pod 'Alamofire'
