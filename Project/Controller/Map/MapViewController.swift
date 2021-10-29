@@ -385,7 +385,7 @@ extension MapViewController {
         if let coordinate = coordinate {
             
             DispatchQueue.main.async {
-                ProximiioMapbox.shared.followingUser = false
+                // ProximiioMapbox.shared.followingUser = false
                 self.mapView?.setCenter(coordinate, zoomLevel: zoom, animated: true)
             }
             
@@ -409,7 +409,9 @@ extension MapViewController: ProximiioDelegate {
     }
     
     func proximiioPositionUpdated(_ location: ProximiioLocation!) {
+        guard let location = location else { return }
         currentUserPosition = location.coordinate
+        mapUIOverlayHeader.location = location
     }
 
     func proximiioExitedGeofence(_ geofence: ProximiioGeofence!) {
@@ -431,11 +433,11 @@ extension MapViewController {
             } else {
                 ProximiioMapbox.shared.followingUser = true
             }
-            self?.mapUIOverlayHeader.trackingUser = ProximiioMapbox.shared.followingUser
             // force center to user position
             if ProximiioMapbox.shared.followingUser {
                 self?.centerAtUser()
             }
+            self?.mapUIOverlayHeader.trackingUser = ProximiioMapbox.shared.followingUser
         }
     }
     
