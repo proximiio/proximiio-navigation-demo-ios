@@ -55,6 +55,14 @@ class MapOverlayHeader: UIView {
         }
         return nil
     }
+
+    public var location: ProximiioLocation? {
+        didSet {
+            guard let location = location else { return }
+            // swiftlint:disable line_length
+            labelDebug.text = "Pos: \(location.coordinate.latitude),\(location.coordinate.longitude)\nAccuracy: h\(location.horizontalAccuracy) - v\(location.verticalAccuracy)\nSource:\(location.sourceType)"
+        }
+    }
     
     // MARK: - Private variable
     // side buttons (support auto switch of the side according user defaults)
@@ -150,6 +158,16 @@ class MapOverlayHeader: UIView {
         let search = SearchView()
         return search
     }()
+
+    private lazy var labelDebug: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.font = .preferredFont(forTextStyle: .body)
+        label.textColor = Theme.black.value
+        label.numberOfLines = 0
+        label.backgroundColor = .lightGray
+        return label
+    }()
     
     // MARK: - Init
     init() {
@@ -181,6 +199,17 @@ class MapOverlayHeader: UIView {
         
         let actualSize = MapOverlayHeader.buttonSize
         let iconMargin = CGFloat(15)
+
+        // add spacer
+        verticalStack.addArrangedSubview(UIView.spacer(of: 10))
+
+        verticalStack.addArrangedSubview(labelDebug)
+        labelDebug.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(20)
+            $0.left.equalToSuperview().inset(16)
+            $0.right.equalToSuperview().inset(16)
+        }
+        labelDebug.translatesAutoresizingMaskIntoConstraints = false
         
         // add spacer
         verticalStack.addArrangedSubview(UIView.spacer(of: 10))
