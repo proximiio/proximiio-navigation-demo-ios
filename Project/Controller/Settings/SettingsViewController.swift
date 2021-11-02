@@ -21,8 +21,7 @@ class SettingsViewController: FormViewController {
         "settings_guidance_disability_none"
     ]
 
-    private lazy var buttonSave = UIBarButtonItem.init(title: "settings_save".localized(), style: .plain) {
-
+    private func save() {
         let side = (self.form.rowBy(tag: "settings_accessibility_ui_side") as? SegmentedRow<String>)?.value ?? "right"
 
         let whichSide = "settings_right".localized() == side.localized() ? Settings.Side.right : Settings.Side.left
@@ -48,9 +47,6 @@ class SettingsViewController: FormViewController {
         let index = localizedOptions.firstIndex(of: selectedMeta) ?? localizedOptions.count - 1
         Settings.shared.accessibilityDisabilities = index
 
-        if let app = UIApplication.shared.delegate as? AppDelegate {
-            app.showApp()
-        }
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -70,28 +66,38 @@ class SettingsViewController: FormViewController {
         SegmentedRow<String>.defaultCellSetup = { cell, row in row.cell.textLabel?.font = .preferredFont(forTextStyle: .body)}
         PushRow<String>.defaultCellSetup = { cell, row in
             row.cell.textLabel?.font = .preferredFont(forTextStyle: .headline)
+            ButtonRow.defaultCellSetup = { cell, row in
+                row.cell.contentView.backgroundColor = Theme.blueDarker.value
+                cell.tintColor = Theme.white.value
+            }
         }
 
         title = "settings_title".localized()
-        view.tintColor = Theme.background(.dark).value
 
-        buttonSave.tintColor = .white
-        self.navigationItem.setRightBarButton(buttonSave, animated: false)
+        view.tintColor = Theme.background(.dark).value
 
         // force tint for the whole form
         self.view.tintColor = Theme.background(.dark).value
 
         form
+            +++ ButtonRow {
+                $0.title = "settings_save".localized()
+            }.onCellSelection({ [weak self] _, _ in
+                self?.save()
+                self?.dismiss(animated: true)
+            })
             // Display Options
             +++ Section { section in
                 var header = HeaderFooterView<UITextView>(.class)
-                header.height = {30.0}
+                header.height = { 40.0 }
                 header.onSetupView = { view, _ in
                     view.text = "settings_display_mode".localized()
                     view.textColor = Theme.background(.dark).value
                     view.font = .preferredFont(forTextStyle: .title1)
                     view.backgroundColor = .clear
                     view.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+                    view.isEditable = false
+                    view.isSelectable = false
                 }
                 section.header = header
             }
@@ -114,13 +120,15 @@ class SettingsViewController: FormViewController {
             // Route
             +++ Section { section in
                 var header = HeaderFooterView<UITextView>(.class)
-                header.height = {30.0}
+                header.height = { 30.0 }
                 header.onSetupView = { view, _ in
                     view.text = "settings_route_options".localized()
                     view.textColor = Theme.background(.dark).value
                     view.font = .preferredFont(forTextStyle: .title1)
                     view.backgroundColor = .clear
                     view.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+                    view.isEditable = false
+                    view.isSelectable = false
                 }
                 section.header = header
             }
@@ -153,13 +161,15 @@ class SettingsViewController: FormViewController {
             // Voice guidance
             +++ Section(header: "settings_voice_guidance", footer: "") { section in
                 var header = HeaderFooterView<UITextView>(.class)
-                header.height = {30.0}
+                header.height = { 30.0 }
                 header.onSetupView = { view, _ in
                     view.text = "settings_voice_notification".localized()
                     view.textColor = Theme.background(.dark).value
                     view.font = .preferredFont(forTextStyle: .title1)
                     view.backgroundColor = .clear
                     view.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+                    view.isEditable = false
+                    view.isSelectable = false
                 }
                 section.header = header
             }
@@ -234,29 +244,29 @@ class SettingsViewController: FormViewController {
                     Settings.shared.voiceGuidanceConfirmTrip = newValue
                 }
             }
-            <<< PushRow<String>("settings_voice_guidance_confirm_trip_distance") {
-                $0.title = "settings_voice_confirm_trip_every".localized()
-                $0.options = [
-                    "settings_voice_10_meter".localized(),
-                    "settings_voice_15_meter".localized(),
-                    "settings_voice_20_meter".localized(),
-                    "settings_voice_25_meter".localized()
-                ]
-                $0.value = $0.options?[Settings.shared.voiceGuidanceConfirmTripDistance].localized()
-                $0.hidden = Condition.function(["settings_voice_guidance_confirm_trip"], { form in
-                    return !((form.rowBy(tag: "settings_voice_guidance_confirm_trip") as? SwitchRow)?.value ?? false)
-                })
-                $0.onChange { row in
-                    var index  = 0
-                    row.options?.enumerated().forEach({ (offset, element) in
-                        if element == row.value {
-                            index = offset
-                        }
-                    })
-
-                    Settings.shared.voiceGuidanceConfirmTripDistance = index
-                }
-            }
+//            <<< PushRow<String>("settings_voice_guidance_confirm_trip_distance") {
+//                $0.title = "settings_voice_confirm_trip_every".localized()
+//                $0.options = [
+//                    "settings_voice_10_meter".localized(),
+//                    "settings_voice_15_meter".localized(),
+//                    "settings_voice_20_meter".localized(),
+//                    "settings_voice_25_meter".localized()
+//                ]
+//                $0.value = $0.options?[Settings.shared.voiceGuidanceConfirmTripDistance].localized()
+//                $0.hidden = Condition.function(["settings_voice_guidance_confirm_trip"], { form in
+//                    return !((form.rowBy(tag: "settings_voice_guidance_confirm_trip") as? SwitchRow)?.value ?? false)
+//                })
+//                $0.onChange { row in
+//                    var index  = 0
+//                    row.options?.enumerated().forEach({ (offset, element) in
+//                        if element == row.value {
+//                            index = offset
+//                        }
+//                    })
+//
+//                    Settings.shared.voiceGuidanceConfirmTripDistance = index
+//                }
+//            }
 
             // UI accessibility
             +++ Section { section in
@@ -268,6 +278,8 @@ class SettingsViewController: FormViewController {
                     view.font = .preferredFont(forTextStyle: .title1)
                     view.backgroundColor = .clear
                     view.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+                    view.isEditable = false
+                    view.isSelectable = false
                 }
                 section.header = header
             }
@@ -304,5 +316,10 @@ class SettingsViewController: FormViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.layoutSubviews()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        save()
     }
 }
