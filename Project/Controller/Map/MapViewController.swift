@@ -153,16 +153,13 @@ class MapViewController: BaseViewController {
         ProximiioMapbox.shared.debugShowDevelopmentRoutes = false
         ProximiioMapbox.shared.enableSimulationWalk(enabled: UserDefaults.standard.bool(forKey: Key.simulateWalk.rawValue))
 
-        // Test custom read text
-        ProximiioMapbox.shared.say(text: "Welcome to Proximi.io Demo")
-
         // Inject custom floor names
-        ProximiioMapbox.shared.levelNameMapper = [
-            1: "A level that can be called ground",
-            2: "Office floor",
-            3: "Game room",
-            4: "Awesome custom name"
-        ]
+//        ProximiioMapbox.shared.levelNameMapper = [
+//            1: "A level that can be called ground",
+//            2: "Office floor",
+//            3: "Game room",
+//            4: "Awesome custom name"
+//        ]
 
         // Tweak thresholds
 
@@ -233,6 +230,11 @@ class MapViewController: BaseViewController {
             }
             
             prepareMapUI()
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                // Test custom read text
+                ProximiioMapbox.shared.say(text: "Welcome to Proximi.io Demo")
+            })
             
         }
     }
@@ -507,14 +509,12 @@ extension MapViewController {
 extension MapViewController: MGLMapViewDelegate {
     
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
-        
         // set first map position center on dewa
         DispatchQueue.main.async {
             mapView.setUserTrackingMode(.followWithHeading, animated: true, completionHandler: nil)
         }
         
         self.perform(#selector(MapViewController.centerAtUser), with: nil, afterDelay: 1.8)
-        
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
