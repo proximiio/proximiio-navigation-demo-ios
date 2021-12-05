@@ -17,7 +17,6 @@ class MapOverlayFooter: UIView {
     private var subscriptions = Set<AnyCancellable>()
     public var action = PassthroughSubject<Action, Never>()
 
-    private var featureList = PIODatabase.sharedInstance().poisAndLevelChanger()
     public var updateRouteDataPackage: PIORouteUpdateDataPackage? {
         didSet {
             guard
@@ -31,17 +30,14 @@ class MapOverlayFooter: UIView {
             /// if type is cancel, hide stuff in less than 1 sec
             switch update.0 {
             case .canceled, .routeNotfound, .finished:
-                // NSLog("hide .canceled, .routeNotfound, .finished")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4) { [weak self] in
                     self?.hide(navigation: true, search: false, nearby: false)
                 }
             case .calculating, .recalculating:
                 /// in this scenario not show the summary is not yet needed
-                // NSLog("hide .calculating, .recalculating")
                 self.hide(navigation: false, search: true, nearby: true)
             default:
                 /// otherwise hide search and show the rest
-                // NSLog("hide default // otherwise hide search and show the rest")
                 self.hide(navigation: false, search: true, nearby: true)
             }
 
@@ -76,16 +72,6 @@ class MapOverlayFooter: UIView {
 
     // navigation box
     public var navigationView = NavigationView()
-
-    // contains the information about step, minutes in short version
-    // in expanded version show also detailed directions
-    private var stackSummary = UIStackView()
-    // is the stack for the information
-    private var stackSummaryHeadline = UIStackView()
-    private var viewTimeRemaining = UIView()
-    private var labelAlert = UILabel()
-    // by default hidden, show the steps to reach the place
-    private var tablePathSteps = UITableView()
 
     // MARK: - Init
     init() {
