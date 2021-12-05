@@ -9,8 +9,6 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    private var notificationChangeApplication = NotificationCenter()
-
     // manage white status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
