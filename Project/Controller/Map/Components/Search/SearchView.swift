@@ -9,7 +9,7 @@ import Foundation
 import SnapKit
 import Closures
 
-protocol SearchViewDelegate: class {
+protocol SearchViewDelegate: AnyObject {
     func didTapSearchField()
 }
 

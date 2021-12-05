@@ -11,7 +11,7 @@ import ProximiioMapbox
 import Proximiio
 import Closures
 
-protocol NavigationViewDelegate: class {
+protocol NavigationViewDelegate: AnyObject {
     func didTapStopNavigation()
 }
 

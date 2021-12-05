@@ -16,7 +16,7 @@ extension UINavigationController {
 }
 
 // MARK: Back handler
-public protocol BackButtonHandler: class {
+public protocol BackButtonHandler: AnyObject {
     func shouldPopOnBackButton() -> Bool
 }
 

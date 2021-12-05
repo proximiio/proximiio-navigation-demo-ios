@@ -23,7 +23,6 @@ class MapViewController: BaseViewController {
     internal var mapUIOverlayHeader = MapOverlayHeader()
     internal var mapUIOverlayFooter = MapOverlayFooter()
     internal var currentRoute: PIORoute?
-    internal var isOutOfGeofence = true
     
     internal var subscriptions = Set<AnyCancellable>()
     

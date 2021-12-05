@@ -66,7 +66,6 @@ class NearbyView: UIView {
         
         return collection
     }()
-    private var gesturesActive = true
     
     private lazy var labelExplore: UILabel = {
         let label = UILabel()
