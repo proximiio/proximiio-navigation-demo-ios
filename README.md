@@ -5,6 +5,7 @@
 Open _terminal_ and run the command below in the directory of the project:
 
 ```bash
+pod repo update
 pod install
 ```
 
