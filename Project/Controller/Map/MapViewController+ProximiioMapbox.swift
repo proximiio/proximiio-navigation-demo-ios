@@ -9,17 +9,19 @@
 import Foundation
 import Proximiio
 import ProximiioMapbox
+import ProximiioProcessor
 import TapticEngine
 import Combine
 
 // MARK: - PDR helper
 extension MapViewController {
-    private func calculatePathPdr(route: PIORoute, level: Int? = UserLocation.shared.floor) -> [[CLLocation]] {
+    private func calculatePathPdr(route: PIORoute, level: Int? = UserLocation.shared.floor) -> [[CLLocationFloor]] {
         let path = route
             .nodeList
-            .filter { $0.level == UserLocation.shared.floor }
-            .compactMap { node -> [CLLocation] in
-                return node.lineStringCoordinates.toCLLocationArray()
+            .compactMap {
+                $0.lineStringCoordinates.toCLLocationArray().compactMap {
+                    CLLocationFloor(location: CLLocation(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude), floor: (level ?? 0))
+                }
             }
         return path
     }

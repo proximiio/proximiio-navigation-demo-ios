@@ -63,7 +63,6 @@ extension AppDelegate {
 //        ProximiioLocationManager.shared()?.addProcessor(snapProcessor, avoidDuplicates: false)
 
         // simulation processor
-        simulationProcessor.avgStepLength = 0.70
         ProximiioLocationManager.shared()?.addProcessor(simulationProcessor, avoidDuplicates: true)
         
         // startup proximiio
