@@ -6,6 +6,7 @@
 //  Copyright © 2019 dev. All rights reserved.
 //
 
+import UIKit
 import ProximiioMapLibre
 
 extension PIOGuidanceDirection {

@@ -1,5 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/proximiio/proximiio-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '13.0'
 
 use_frameworks!
@@ -10,8 +11,8 @@ target 'Demo' do
   pod 'ProximiioProcessor'
 
 #  pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
-  #pod 'ProximiioMapLibre', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
-  #pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
+#  pod 'ProximiioMapLibre', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
+#  pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
 
   pod 'Alamofire'
   pod 'Eureka'
