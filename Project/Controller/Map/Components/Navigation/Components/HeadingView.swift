@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import ProximiioMapbox
+import ProximiioMapLibre
 
 class HeadingView: UIView {
 

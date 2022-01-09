@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ProximiioMapbox
+import ProximiioMapLibre
 
 class PreviewCellDirection: UITableViewCell {
 

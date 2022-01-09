@@ -6,7 +6,7 @@
 //  Copyright © 2019 dev. All rights reserved.
 //
 
-import ProximiioMapbox
+import ProximiioMapLibre
 
 extension PIOGuidanceDirection {
 

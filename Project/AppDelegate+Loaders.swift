@@ -7,7 +7,7 @@
 //
 
 import IQKeyboardManagerSwift
-import ProximiioMapbox
+import ProximiioMapLibre
 import UserNotifications
 
 // MARK: - Loaders

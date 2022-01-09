@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ProximiioMapbox
+import ProximiioMapLibre
 
 class CacheDb {
     static let shared = CacheDb()

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ProximiioMapbox
+import ProximiioMapLibre
 
 extension PIOWayfindingOptions {
     static public var optionsConfiguration: PIOWayfindingOptions {

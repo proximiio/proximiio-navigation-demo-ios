@@ -26,7 +26,7 @@ PODS:
   - Proximiio (5.2.17):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapbox (5.2.0):
+  - ProximiioMapLibre (5.4.0):
     - Alamofire
     - GRMustache.swift
     - MapLibre
@@ -63,7 +63,7 @@ DEPENDENCIES:
   - Kingfisher
   - LicensePlist (~> 2.5.8)
   - PopupDialog (~> 1.1)
-  - ProximiioMapbox (from `https://github.com/proximiio/proximiio-mapbox-ios-pod.git`, tag `5.2.0`)
+  - ProximiioMapLibre (from `https://github.com/proximiio/proximiio-maplibre-ios-pod.git`)
   - ProximiioProcessor
   - SnapKit (~> 5.0.0)
   - SwiftLint
@@ -104,9 +104,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/matteocrippa/CheckboxButton.git
   DKCarouselView:
     :git: https://github.com/matteocrippa/DKCarouselView.git
-  ProximiioMapbox:
-    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
-    :tag: 5.2.0
+  ProximiioMapLibre:
+    :git: https://github.com/proximiio/proximiio-maplibre-ios-pod.git
   TapticEngine:
     :git: https://github.com/matteocrippa/TapticEngine.git
 
@@ -120,9 +119,9 @@ CHECKOUT OPTIONS:
   DKCarouselView:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
-  ProximiioMapbox:
-    :git: https://github.com/proximiio/proximiio-mapbox-ios-pod.git
-    :tag: 5.2.0
+  ProximiioMapLibre:
+    :commit: 1b3077adb53ecb020869447b4d7d72aa1cd2bd86
+    :git: https://github.com/proximiio/proximiio-maplibre-ios-pod.git
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
     :git: https://github.com/matteocrippa/TapticEngine.git
@@ -149,7 +148,7 @@ SPEC CHECKSUMS:
   MapLibre: f44d4106a590d1ea6779fb6c96c048ec6a9a2767
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Proximiio: 932c3afdacfefc5b15b18082fc6be618ea71deba
-  ProximiioMapbox: 289c877caca288e638e17cc8be5e183a7cf56ec2
+  ProximiioMapLibre: 24af1f1998a02eae65cce914de6ae6f4b4cd0758
   ProximiioProcessor: f93daeaf93aeabaf2ee751a2aae1118de65be053
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
@@ -158,6 +157,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 8bd5566569984d8c91e3d22ec057684a2be322ff
+PODFILE CHECKSUM: 390b399df1e53251f5d6101f1a9f839317e919f5
 
 COCOAPODS: 1.11.2

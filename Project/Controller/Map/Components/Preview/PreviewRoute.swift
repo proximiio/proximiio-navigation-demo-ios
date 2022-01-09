@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 import Combine
 
 class PreviewRoute: UIView {

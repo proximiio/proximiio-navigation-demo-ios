@@ -9,7 +9,7 @@
 import Combine
 import Foundation
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 
 public class PreviewRouteViewModel {
     @Published public var route: PIORoute?

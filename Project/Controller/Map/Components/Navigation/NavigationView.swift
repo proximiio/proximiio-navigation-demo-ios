@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ProximiioMapbox
+import ProximiioMapLibre
 import Proximiio
 import Closures
 

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ProximiioMapbox
+import ProximiioMapLibre
 import Proximiio
 
 // MARK: - Preview handler
@@ -33,12 +33,12 @@ extension MapViewController {
 
             self?.view.layoutSubviews()
 
-            ProximiioMapbox.shared.hidePreviewDestinationMarker()
-            ProximiioMapbox.shared.showPreviewDestinationMarker(UIImage(named: "destination"), coordinate: feature.coordinate, level: feature.level)
+            ProximiioMapLibre.shared.hidePreviewDestinationMarker()
+            ProximiioMapLibre.shared.showPreviewDestinationMarker(UIImage(named: "destination"), coordinate: feature.coordinate, level: feature.level)
 
             self?.isPreview = true
             
-            ProximiioMapbox.shared.routeFindAndPreview(configuration: configuration) { route in
+            ProximiioMapLibre.shared.routeFindAndPreview(configuration: configuration) { route in
                 self?.previewView.viewModel.route = route
                 
                 self?.previewView.snp.updateConstraints {
@@ -64,7 +64,7 @@ extension MapViewController {
     
     func hideAnnotations() {
         DispatchQueue.main.async {
-            ProximiioMapbox.shared.hidePreviewDestinationMarker()
+            ProximiioMapLibre.shared.hidePreviewDestinationMarker()
         }
     }
 }
@@ -76,10 +76,10 @@ extension MapViewController {
         hidePreview()
 
         // generate route
-        ProximiioMapbox.shared.mapNavigation = self
-        ProximiioMapbox.shared.mapInteraction = self
+        ProximiioMapLibre.shared.mapNavigation = self
+        ProximiioMapLibre.shared.mapInteraction = self
         DispatchQueue.global(qos: .background).async {
-            ProximiioMapbox.shared.routeStart(route)
+            ProximiioMapLibre.shared.routeStart(route)
         }
     }
 
@@ -89,14 +89,14 @@ extension MapViewController {
 
 //        DispatchQueue.main.async { [weak self] in
 //            self?.hidePreview()
-//            // ProximiioMapbox.shared.mapNavigation = self
-//            // ProximiioMapbox.shared.mapInteraction = self
+//            // ProximiioMapLibre.shared.mapNavigation = self
+//            // ProximiioMapLibre.shared.mapInteraction = self
 //            // self?.mapUIOverlayFooter.hide(navigation: true, search: false, nearby: false)
 //            self?.previewView.reset()
 //        }
         DispatchQueue.global(qos: .background).async { [weak self] in
             self?.hideAnnotations()
-            ProximiioMapbox.shared.routeCancel(silent: true)
+            ProximiioMapLibre.shared.routeCancel(silent: true)
         }
     }
 }

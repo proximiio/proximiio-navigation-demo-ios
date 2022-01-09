@@ -8,7 +8,7 @@
 
 import Foundation
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 
 @objc class DemoFilter: NSObject, PIOFilter {
     

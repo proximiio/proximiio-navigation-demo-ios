@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ProximiioMapbox
+import ProximiioMapLibre
 import Proximiio
 import Kingfisher
 

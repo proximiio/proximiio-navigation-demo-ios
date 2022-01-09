@@ -8,7 +8,7 @@
 
 import Foundation
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 import ProximiioProcessor
 import TapticEngine
 import Combine
@@ -27,8 +27,8 @@ extension MapViewController {
     }
 }
 
-// MARK: - ProximiioMapBox Delegate
-extension MapViewController: ProximiioMapboxNavigation {
+// MARK: - ProximiioMapLibre Delegate
+extension MapViewController: ProximiioMapLibreNavigation {
 
     func onRoute(route: PIORoute?) {
         // reset location and hazards
@@ -117,7 +117,7 @@ extension MapViewController: ProximiioMapboxNavigation {
     }
 }
 
-extension MapViewController: ProximiioMapboxInteraction {
+extension MapViewController: ProximiioMapLibreInteraction {
     func change(floor: Int) {
         self.changeFloor(floor)
 

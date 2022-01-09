@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import ProximiioMapbox
+import ProximiioMapLibre
 import Proximiio
 
 class LocationView: UIView {

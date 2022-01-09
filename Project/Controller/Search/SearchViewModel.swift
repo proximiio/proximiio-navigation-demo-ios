@@ -9,7 +9,7 @@
 import Combine
 import Foundation
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 
 class SearchViewModel {
     @Published public var pois = PIODatabase.sharedInstance().poisAndLevelChanger()

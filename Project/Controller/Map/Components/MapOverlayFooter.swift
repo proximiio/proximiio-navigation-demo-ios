@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 import Closures
-import ProximiioMapbox
+import ProximiioMapLibre
 import Proximiio
 import Combine
 

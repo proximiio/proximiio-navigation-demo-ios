@@ -6,7 +6,7 @@
 //  Copyright © 2019 proximiio. All rights reserved.
 //
 
-import ProximiioMapbox
+import ProximiioMapLibre
 import Proximiio
 
 extension ProximiioIBeacon {

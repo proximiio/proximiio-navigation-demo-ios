@@ -8,7 +8,7 @@
 
 import Combine
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 import UIKit
 
 class PreviewRouteDataSource: NSObject {

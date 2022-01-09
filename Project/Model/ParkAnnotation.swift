@@ -6,7 +6,7 @@
 //  Copyright © 2021 dev. All rights reserved.
 //
 
-import ProximiioMapbox
+import ProximiioMapLibre
 
 public class ParkAnnotation: PIOAnnotation {
     public var isParking = true

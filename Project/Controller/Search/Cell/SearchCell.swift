@@ -8,7 +8,7 @@
 
 import Kingfisher
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 import SnapKit
 import UIKit
 

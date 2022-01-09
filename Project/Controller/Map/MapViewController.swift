@@ -11,7 +11,7 @@ import Combine
 import Mapbox
 import PopupDialog
 import Proximiio
-import ProximiioMapbox
+import ProximiioMapLibre
 import SnapKit
 import TapticEngine
 import UserNotifications
@@ -40,7 +40,7 @@ class MapViewController: BaseViewController {
                 case .cancel:
                     self?.previewCancel()
                 case .levelUpdate(let level):
-                    ProximiioMapbox.shared.setLevel(level: level)
+                    ProximiioMapLibre.shared.setLevel(level: level)
                 case .start(let feature, let route):
                     self?.previewStart(feature: feature, route: route)
                 }
@@ -51,7 +51,7 @@ class MapViewController: BaseViewController {
     
     private lazy var settings = UIBarButtonItem.init(image: UIImage.init(named: "settings")!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), style: .plain, handler: { [weak self] in
         // force cancel route
-        ProximiioMapbox.shared.routeCancel(silent: false)
+        ProximiioMapLibre.shared.routeCancel(silent: false)
         
         // dismiss preview accessory view (if needed)
         self?.previewCancel()
@@ -86,7 +86,7 @@ class MapViewController: BaseViewController {
             
             // update map UI
             DispatchQueue.main.async {
-                ProximiioMapbox.shared.setLevel(level: floor.level.intValue)
+                ProximiioMapLibre.shared.setLevel(level: floor.level.intValue)
             }
             self.mapUIOverlayHeader.populateFloorList()
         }
@@ -111,49 +111,49 @@ class MapViewController: BaseViewController {
                 
         // manage behaviour
         // force follow the path of current route
-        ProximiioMapbox.shared.shakyHandsMode = Settings.shared.navigationType == .path
+        ProximiioMapLibre.shared.shakyHandsMode = Settings.shared.navigationType == .path
         
         // manage navigator
         let metadataKeys = [Settings.shared.accessibilityDisabilities+1]
-        ProximiioMapbox.shared.navigation?.ttsEnable(enable: Settings.shared.guidanceEnabled)
-        ProximiioMapbox.shared.navigation?.ttsHeadingCorrection(enabled: true)
-        ProximiioMapbox.shared.navigation?.ttsDecisionAlert(enabled: Settings.shared.voiceGuidanceSpeakDecision, metadataKeys: metadataKeys)
-        ProximiioMapbox.shared.navigation?.ttsHazardAlert(enabled: Settings.shared.voiceGuidanceSpeakWarning, metadataKeys: metadataKeys)
-        ProximiioMapbox.shared.navigation?.ttsLandmarkAlert(enabled: Settings.shared.voiceGuidanceSpeakLandmark, metadataKeys: metadataKeys)
-        ProximiioMapbox.shared.navigation?.ttsSegmentAlert(
+        ProximiioMapLibre.shared.navigation?.ttsEnable(enable: Settings.shared.guidanceEnabled)
+        ProximiioMapLibre.shared.navigation?.ttsHeadingCorrection(enabled: true)
+        ProximiioMapLibre.shared.navigation?.ttsDecisionAlert(enabled: Settings.shared.voiceGuidanceSpeakDecision, metadataKeys: metadataKeys)
+        ProximiioMapLibre.shared.navigation?.ttsHazardAlert(enabled: Settings.shared.voiceGuidanceSpeakWarning, metadataKeys: metadataKeys)
+        ProximiioMapLibre.shared.navigation?.ttsLandmarkAlert(enabled: Settings.shared.voiceGuidanceSpeakLandmark, metadataKeys: metadataKeys)
+        ProximiioMapLibre.shared.navigation?.ttsSegmentAlert(
             enterEnabled: Settings.shared.voiceGuidanceSpeakSegment,
             exitEnabled: Settings.shared.voiceGuidanceSpeakSegment,
             metadataKeys: metadataKeys)
         //
-        ProximiioMapbox.shared.navigation?.ttsReassuranceInstruction(enabled: Settings.shared.voiceGuidanceConfirmTrip)
+        ProximiioMapLibre.shared.navigation?.ttsReassuranceInstruction(enabled: Settings.shared.voiceGuidanceConfirmTrip)
         switch Settings.shared.voiceGuidanceConfirmTripDistance {
         case 0:
-            ProximiioMapbox.shared.navigation?.ttsReassuranceInstruction(distance: 10.0)
+            ProximiioMapLibre.shared.navigation?.ttsReassuranceInstruction(distance: 10.0)
         case 1:
-            ProximiioMapbox.shared.navigation?.ttsReassuranceInstruction(distance: 15.0)
+            ProximiioMapLibre.shared.navigation?.ttsReassuranceInstruction(distance: 15.0)
         case 2:
-            ProximiioMapbox.shared.navigation?.ttsReassuranceInstruction(distance: 20.0)
+            ProximiioMapLibre.shared.navigation?.ttsReassuranceInstruction(distance: 20.0)
         case 3:
-            ProximiioMapbox.shared.navigation?.ttsReassuranceInstruction(distance: 25.0)
+            ProximiioMapLibre.shared.navigation?.ttsReassuranceInstruction(distance: 25.0)
         default:
-            ProximiioMapbox.shared.navigation?.ttsReassuranceInstruction(distance: 15.0)
+            ProximiioMapLibre.shared.navigation?.ttsReassuranceInstruction(distance: 15.0)
         }
         
         if Settings.shared.routeDistanceUnits == .steps {
             let converter = PIOUnitConversion(stageList: [
                 PIOUnitConversion.UnitStage(unitName: "steps", unitConversionToMeters: 1.0 / stepLength, minValueInMeters: 0.0, decimals: 0)
             ])
-            ProximiioMapbox.shared.navigation?.setUnitConversion(conversion: converter)
+            ProximiioMapLibre.shared.navigation?.setUnitConversion(conversion: converter)
         } else {
-            ProximiioMapbox.shared.navigation?.setUnitConversion(conversion: .Default )
+            ProximiioMapLibre.shared.navigation?.setUnitConversion(conversion: .Default )
         }
         
         // pass information about simulate walk
-        ProximiioMapbox.shared.debugShowDevelopmentRoutes = false
-        ProximiioMapbox.shared.enableSimulationWalk(enabled: UserDefaults.standard.bool(forKey: Key.simulateWalk.rawValue))
+        ProximiioMapLibre.shared.debugShowDevelopmentRoutes = false
+        ProximiioMapLibre.shared.enableSimulationWalk(enabled: UserDefaults.standard.bool(forKey: Key.simulateWalk.rawValue))
 
         // Inject custom floor names
-//        ProximiioMapbox.shared.levelNameMapper = [
+//        ProximiioMapLibre.shared.levelNameMapper = [
 //            1: "A level that can be called ground",
 //            2: "Office floor",
 //            3: "Game room",
@@ -169,14 +169,14 @@ class MapViewController: BaseViewController {
         // Default value 5.0 meters, if you decrease you will get this information the latest
         // If you increase you will get the information much early
         // In this case we will tweak to have it a bit early ~8.0 meters from the event
-        ProximiioMapbox.shared.navigation?.setStepPreparationThreshold(inMeters: 8.0)
+        ProximiioMapLibre.shared.navigation?.setStepPreparationThreshold(inMeters: 8.0)
 
         // We also anticipate of 0.5 meter the default value of 2.5 meters
-        ProximiioMapbox.shared.navigation?.setStepImmediateThreshold(inMeters: 3.0)
+        ProximiioMapLibre.shared.navigation?.setStepImmediateThreshold(inMeters: 3.0)
 
         // Finally we can tweak also the distance for a "Soon" (aka very close) event for TTS
         // In this case we lowered down of 1 meter (so it will be said out late compared to default)
-        ProximiioMapbox.shared.navigation?.ttsSoonUpdateThreshold(thresholdMeters: 4.0)
+        ProximiioMapLibre.shared.navigation?.ttsSoonUpdateThreshold(thresholdMeters: 4.0)
 
         // force disable idle
         UIApplication.shared.isIdleTimerDisabled = true
@@ -206,7 +206,7 @@ class MapViewController: BaseViewController {
         let mapToken = Proximiio.sharedInstance()?.token() ?? ""
         Proximiio.sharedInstance()?.delegate = self
         
-        let config = ProximiioMapboxConfiguration(token: mapToken)
+        let config = ProximiioMapLibreConfiguration(token: mapToken)
         config.showRasterFloorplans = false
         config.showGeoJSONFloorplans = true
         
@@ -219,12 +219,12 @@ class MapViewController: BaseViewController {
         self.mapView?.attributionButtonPosition = .bottomRight
         self.mapView?.setZoomLevel(18, animated: false)
         if let mapView = mapView {
-            ProximiioMapbox.shared.setup(mapView: mapView, configuration: config)
-            ProximiioMapbox.shared.patchGroundLevel = 1
-            ProximiioMapbox.shared.initialize { result in
+            ProximiioMapLibre.shared.setup(mapView: mapView, configuration: config)
+            ProximiioMapLibre.shared.patchGroundLevel = 1
+            ProximiioMapLibre.shared.initialize { result in
                 if result == .success {
-                    ProximiioMapbox.shared.mapNavigation = self
-                    ProximiioMapbox.shared.mapInteraction = self
+                    ProximiioMapLibre.shared.mapNavigation = self
+                    ProximiioMapLibre.shared.mapInteraction = self
                 }
             }
             
@@ -232,7 +232,7 @@ class MapViewController: BaseViewController {
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
                 // Test custom read text
-                ProximiioMapbox.shared.say(text: "Welcome to Proximi.io Demo")
+                ProximiioMapLibre.shared.say(text: "Welcome to Proximi.io Demo")
             })
             
         }
@@ -302,7 +302,7 @@ class MapViewController: BaseViewController {
         self.mapView?.removeFromSuperview()
         
         self.mapView = nil
-        ProximiioMapbox.shared.resetMap()
+        ProximiioMapLibre.shared.resetMap()
     }
 }
 
@@ -386,7 +386,7 @@ extension MapViewController {
         if let coordinate = coordinate {
             
             DispatchQueue.main.async {
-                // ProximiioMapbox.shared.followingUser = false
+                // ProximiioMapLibre.shared.followingUser = false
                 self.mapView?.setCenter(coordinate, zoomLevel: zoom, animated: true)
             }
             
@@ -430,15 +430,15 @@ extension MapViewController {
     internal func userNavigationMode(forceOn: Bool = false) {
         DispatchQueue.main.async { [weak self] in
             if !forceOn {
-                ProximiioMapbox.shared.followingUser = !ProximiioMapbox.shared.followingUser
+                ProximiioMapLibre.shared.followingUser = !ProximiioMapLibre.shared.followingUser
             } else {
-                ProximiioMapbox.shared.followingUser = true
+                ProximiioMapLibre.shared.followingUser = true
             }
             // force center to user position
-            if ProximiioMapbox.shared.followingUser {
+            if ProximiioMapLibre.shared.followingUser {
                 self?.centerAtUser()
             }
-            self?.mapUIOverlayHeader.trackingUser = ProximiioMapbox.shared.followingUser
+            self?.mapUIOverlayHeader.trackingUser = ProximiioMapLibre.shared.followingUser
         }
     }
     
@@ -469,7 +469,7 @@ extension MapViewController {
                 case .nearby(let nearby):
                     self?.showSearch(filter: nil, nearby: nearby)
                 case .routeStop:
-                    ProximiioMapbox.shared.routeCancel(silent: false)
+                    ProximiioMapLibre.shared.routeCancel(silent: false)
                 }
             }.store(in: &subscriptions)
         
