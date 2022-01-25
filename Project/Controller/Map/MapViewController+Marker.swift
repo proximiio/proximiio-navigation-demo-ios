@@ -9,6 +9,7 @@
 import Foundation
 import ProximiioMapLibre
 import CoreLocation
+import UIKit
 
 extension MapViewController {
     func addCustomMarkers() {
