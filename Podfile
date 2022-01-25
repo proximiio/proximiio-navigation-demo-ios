@@ -10,8 +10,8 @@ target 'Demo' do
   pod 'ProximiioMapLibre', :git => 'https://github.com/proximiio/proximiio-maplibre-ios-pod.git'
   pod 'ProximiioProcessor'
 
-#  pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
-#  pod 'ProximiioMapLibre', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
+  # pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
+#pod 'ProximiioMapLibre', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
 #  pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
 
   pod 'Alamofire'

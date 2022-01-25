@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F40019B5AB11A7692647CB4 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FACE71DABE19140F9F46D0C /* Pods_Demo.framework */; };
+		482CF49E279EBDCC00978FB3 /* MapViewController+Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482CF49D279EBDCC00978FB3 /* MapViewController+Marker.swift */; };
 		616CAB4A23AA63D300F2F62A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616CAB4923AA63D300F2F62A /* UIImage+Extension.swift */; };
 		D700B6ED25FA6E4400DC9AD4 /* UserLocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D700B6EC25FA6E4400DC9AD4 /* UserLocationAnnotationView.swift */; };
 		D709E1F92371A34B0062522E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D709E1F82371A34B0062522E /* Utils.swift */; };
@@ -84,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		146B68EA8FCE2F1C4A811CE4 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		482CF49D279EBDCC00978FB3 /* MapViewController+Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Marker.swift"; sourceTree = "<group>"; };
 		50517F54ADB1F577177AB29C /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		616CAB4923AA63D300F2F62A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		7FACE71DABE19140F9F46D0C /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,6 +397,7 @@
 				D7F8F512236F3CCF00305439 /* MapViewController.swift */,
 				D710ECC92555AF2F0070CFB4 /* MapViewController+Preview.swift */,
 				D7334B02252C6F5A00D2563B /* MapViewController+ProximiioMapbox.swift */,
+				482CF49D279EBDCC00978FB3 /* MapViewController+Marker.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				616CAB4A23AA63D300F2F62A /* UIImage+Extension.swift in Sources */,
 				D7DE2BAB238D5A4F0096F7D5 /* Date+Extension.swift in Sources */,
 				D757519725DA837900B9F717 /* SearchCell.swift in Sources */,
+				482CF49E279EBDCC00978FB3 /* MapViewController+Marker.swift in Sources */,
 				D7BF4D3425DAED73002B6AD0 /* UIButton+Extension.swift in Sources */,
 				D7F8F513236F3CCF00305439 /* MapViewController.swift in Sources */,
 				D7F8F533236F3E9400305439 /* AppViewController.swift in Sources */,

@@ -23,7 +23,7 @@ PODS:
     - MapboxMobileEvents (= 0.10.2)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.2.17):
+  - Proximiio (5.2.18):
     - CrystDBCipher
     - DarklyEventSource
   - ProximiioMapLibre (5.4.0):
@@ -45,7 +45,7 @@ PODS:
   - SQLCipher/common (4.5.0)
   - SQLCipher/standard (4.5.0):
     - SQLCipher/common
-  - SwiftLint (0.45.1)
+  - SwiftLint (0.46.1)
   - SwiftyJSON (5.0.1)
   - TapticEngine (1.2.0)
 
@@ -147,16 +147,16 @@ SPEC CHECKSUMS:
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   MapLibre: f44d4106a590d1ea6779fb6c96c048ec6a9a2767
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: 932c3afdacfefc5b15b18082fc6be618ea71deba
+  Proximiio: b54927230292d7446d17238a17b58c0a9345fe75
   ProximiioMapLibre: 24af1f1998a02eae65cce914de6ae6f4b4cd0758
   ProximiioProcessor: f93daeaf93aeabaf2ee751a2aae1118de65be053
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 98dc22f27c0b1790d39e710d440f22a466ebdb59
-  SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
+  SwiftLint: aaa29a9f649316095a9079595cb60906bd899353
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: 390b399df1e53251f5d6101f1a9f839317e919f5
+PODFILE CHECKSUM: bc9a79b34aeef8ec35e4fbfb3cda5065127b6ae5
 
 COCOAPODS: 1.11.2

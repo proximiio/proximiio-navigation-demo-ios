@@ -283,6 +283,8 @@ class MapViewController: BaseViewController {
         
         // setup receivers
         setupReceivers()
+
+        addCustomMarkers()
     }
     
     override func didReceiveMemoryWarning() {
@@ -403,7 +405,7 @@ extension MapViewController {
 extension MapViewController: ProximiioDelegate {
     
     func onProximiioReady() {}
-    
+
     func proximiioFloorChanged(_ floor: ProximiioFloor!) {
         // atm better not use this
         setFloor(floor: floor)
@@ -524,7 +526,7 @@ extension MapViewController: MGLMapViewDelegate {
         
         if let current = annotation as? PIOAnnotation {
             
-            let identifier = "destinationAnnotation"
+            let identifier = "\(current.coordinate.longitude)\(current.level)"
             
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             
