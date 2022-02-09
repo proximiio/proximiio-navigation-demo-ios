@@ -536,6 +536,9 @@ extension MapViewController: MGLMapViewDelegate {
                 annotationView!.frame = CGRect(x: 0, y: 0, width: current.image.size.width, height: current.image.size.height)
                 annotationView?.addSubview(imageView)
                 annotationView?.centerOffset = CGVector(dx: 0, dy: -current.image.size.height / 2.0)
+                annotationView?.addTapGesture(handler: { gesture in
+                    current.onTap?(current)
+                })
             }
             
             annotationView?.isHidden = current.isHidden
