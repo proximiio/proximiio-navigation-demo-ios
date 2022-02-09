@@ -23,10 +23,10 @@ PODS:
     - MapboxMobileEvents (= 0.10.2)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.2.18):
+  - Proximiio (5.2.19):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapLibre (5.4.0):
+  - ProximiioMapLibre (5.6.0):
     - Alamofire
     - GRMustache.swift
     - MapLibre
@@ -45,7 +45,7 @@ PODS:
   - SQLCipher/common (4.5.0)
   - SQLCipher/standard (4.5.0):
     - SQLCipher/common
-  - SwiftLint (0.46.1)
+  - SwiftLint (0.46.2)
   - SwiftyJSON (5.0.1)
   - TapticEngine (1.2.0)
 
@@ -120,7 +120,7 @@ CHECKOUT OPTIONS:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
   ProximiioMapLibre:
-    :commit: 1b3077adb53ecb020869447b4d7d72aa1cd2bd86
+    :commit: 1faa14e169fee044824dcd11e095bab7ebbac315
     :git: https://github.com/proximiio/proximiio-maplibre-ios-pod.git
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
@@ -147,16 +147,16 @@ SPEC CHECKSUMS:
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   MapLibre: f44d4106a590d1ea6779fb6c96c048ec6a9a2767
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: b54927230292d7446d17238a17b58c0a9345fe75
-  ProximiioMapLibre: 24af1f1998a02eae65cce914de6ae6f4b4cd0758
+  Proximiio: 3ccdeffb609280d57751489247cc95f20fc77419
+  ProximiioMapLibre: b6a2d15cee697363dcd759fd6fd2a43b60d465f3
   ProximiioProcessor: f93daeaf93aeabaf2ee751a2aae1118de65be053
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SQLCipher: 98dc22f27c0b1790d39e710d440f22a466ebdb59
-  SwiftLint: aaa29a9f649316095a9079595cb60906bd899353
+  SwiftLint: 6bc52a21f0fd44cab9aa2dc8e534fb9f5e3ec507
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: bc9a79b34aeef8ec35e4fbfb3cda5065127b6ae5
+PODFILE CHECKSUM: 543d191725be97b67da1b0f0530e322ca8664357
 
 COCOAPODS: 1.11.2
