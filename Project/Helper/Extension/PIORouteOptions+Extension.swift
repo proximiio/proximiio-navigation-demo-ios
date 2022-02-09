@@ -17,6 +17,7 @@ extension PIOWayfindingOptions {
             avoidEscalators: Settings.shared.avoidEscalator,
             avoidNarrowPaths: true,
             avoidRamps: Settings.shared.avoidRamps,
+//            avoidHills: Settings.shared.avoidHills,
             avoidRevolvingDoors: Settings.shared.avoidRevolvingDoors,
             avoidStaircases: Settings.shared.avoidStairs,
             avoidTicketGates: Settings.shared.avoidTicketGates,

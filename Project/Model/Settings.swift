@@ -41,6 +41,7 @@ class Settings {
     private let routeAvoidEscalatorKey = "Demo_settings_route_avoid_escalator"
     private let routeAvoidBarrierKey = "Demo_settings_route_avoid_barrier"
     private let routeAvoidRampsKey = "Demo_settings_route_avoid_ramps"
+    private let routeAvoidHillsKey = "Demo_settings_route_avoid_hills"
     private let routeAvoidRevolvingDoorsKey = "Demo_settings_route_avoid_revolving_doors"
     private let routeAvoidTicketGatesKey = "Demo_settings_route_avoid_ticket_gates"
     private let routeAccessibleKey = "Demo_settings_route_accessible"
@@ -171,6 +172,16 @@ class Settings {
         }
         set(value) {
             UserDefaults.standard.set(value, forKey: routeAvoidRampsKey)
+        }
+    }
+
+    // handles avoid hills
+    var avoidHills: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: routeAvoidHillsKey)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: routeAvoidHillsKey)
         }
     }
 
