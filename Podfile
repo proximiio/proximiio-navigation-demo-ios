@@ -7,7 +7,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'Demo' do
-  pod 'ProximiioMapLibre', :git => 'https://github.com/proximiio/proximiio-maplibre-ios-pod.git'
+  pod 'ProximiioMapLibre', :git => 'https://github.com/proximiio/proximiio-maplibre-ios-pod.git', :tag => '5.7.0'
   pod 'ProximiioProcessor'
 
  # pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
