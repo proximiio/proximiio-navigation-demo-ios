@@ -1,4 +1,3 @@
-source 'https://github.com/proximiio/proximiio-specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '13.0'
@@ -7,7 +6,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'Demo' do
-  pod 'ProximiioMapLibre', :git => 'https://github.com/proximiio/proximiio-maplibre-ios-pod.git', :tag => '5.7.0'
+  pod 'ProximiioMapLibre'
   pod 'ProximiioProcessor'
 
  # pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'

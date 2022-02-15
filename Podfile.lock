@@ -19,19 +19,19 @@ PODS:
   - Kingfisher (7.1.2)
   - LicensePlist (2.5.8)
   - MapboxMobileEvents (0.10.2)
-  - MapLibre (5.12.1):
-    - MapboxMobileEvents (= 0.10.2)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - Proximiio (5.2.19):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapLibre (5.7.0):
+  - ProximiioMapLibre (5.8.0):
     - Alamofire
     - GRMustache.swift
-    - MapLibre
     - Proximiio
+    - ProximiioMapView
     - SwiftyJSON
+  - ProximiioMapView (5.12.2):
+    - MapboxMobileEvents (= 0.10.2)
   - ProximiioProcessor (0.2.3):
     - Proximiio
     - SwiftyJSON
@@ -63,7 +63,7 @@ DEPENDENCIES:
   - Kingfisher
   - LicensePlist (~> 2.5.8)
   - PopupDialog (~> 1.1)
-  - ProximiioMapLibre (from `https://github.com/proximiio/proximiio-maplibre-ios-pod.git`, tag `5.7.0`)
+  - ProximiioMapLibre
   - ProximiioProcessor
   - SnapKit (~> 5.0.0)
   - SwiftLint
@@ -88,14 +88,14 @@ SPEC REPOS:
     - MapboxMobileEvents
     - PopupDialog
     - Proximiio
+    - ProximiioMapLibre
+    - ProximiioMapView
     - ProximiioProcessor
     - SDWebImage
     - SnapKit
     - SQLCipher
     - SwiftLint
     - SwiftyJSON
-  https://github.com/proximiio/proximiio-specs.git:
-    - MapLibre
 
 EXTERNAL SOURCES:
   AlignedCollectionViewFlowLayout:
@@ -104,9 +104,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/matteocrippa/CheckboxButton.git
   DKCarouselView:
     :git: https://github.com/matteocrippa/DKCarouselView.git
-  ProximiioMapLibre:
-    :git: https://github.com/proximiio/proximiio-maplibre-ios-pod.git
-    :tag: 5.7.0
   TapticEngine:
     :git: https://github.com/matteocrippa/TapticEngine.git
 
@@ -120,9 +117,6 @@ CHECKOUT OPTIONS:
   DKCarouselView:
     :commit: c5b9d683320e55241d6358689148c573ac3e9c8b
     :git: https://github.com/matteocrippa/DKCarouselView.git
-  ProximiioMapLibre:
-    :git: https://github.com/proximiio/proximiio-maplibre-ios-pod.git
-    :tag: 5.7.0
   TapticEngine:
     :commit: 3c04e36ad0003c9b0ae1b50519af3c82d7013044
     :git: https://github.com/matteocrippa/TapticEngine.git
@@ -146,10 +140,10 @@ SPEC CHECKSUMS:
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
-  MapLibre: f44d4106a590d1ea6779fb6c96c048ec6a9a2767
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   Proximiio: 3ccdeffb609280d57751489247cc95f20fc77419
-  ProximiioMapLibre: 8fc12a057e34bc4cd6dd57db8f4f93731496a313
+  ProximiioMapLibre: 1cd8a96703a9684e2dfc0a533ecb5fbe03baf5e6
+  ProximiioMapView: 60540edc88a1a3b7d7fddedd577bfe12ac9ce163
   ProximiioProcessor: f93daeaf93aeabaf2ee751a2aae1118de65be053
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
@@ -158,6 +152,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: d3940a44b637e5d5d3e3b49dcb66136abbe71793
+PODFILE CHECKSUM: f6939dae09cae0be08ae24fef148bb99ce3dc76e
 
 COCOAPODS: 1.11.2
