@@ -6,12 +6,13 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'Demo' do
+  pod 'Proximiio'
   pod 'ProximiioMapLibre'
   pod 'ProximiioProcessor'
 
- # pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
- # pod 'ProximiioMapLibre', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
- # pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
+#  pod 'Proximiio', :path => '~/Repositories/Proximiio/proximiio-ios-sdk/'
+#  pod 'ProximiioMapLibre', :path => '~/Repositories/Proximiio/proximiio-mapbox-ios/'
+#  pod 'ProximiioProcessor', :path => '~/Repositories/Proximiio/ProximiioProcessor/'
 
   pod 'Alamofire'
   pod 'Eureka'

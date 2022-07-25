@@ -1,6 +1,6 @@
 PODS:
   - ActionPicker (0.1.0)
-  - Alamofire (5.5.0)
+  - Alamofire (5.6.2)
   - AlignedCollectionViewFlowLayout (1.1.2)
   - CheckboxButton (3.1.1)
   - Closures (0.7)
@@ -11,20 +11,20 @@ PODS:
     - SDWebImage/GIF (~> 4.1)
   - DropDown (2.3.13)
   - DynamicBlurView (4.1.0)
-  - Eureka (5.3.4)
+  - Eureka (5.3.6)
   - FLAnimatedImage (1.0.16)
   - GRMustache.swift (4.0.1)
   - Hex (6.1.0)
   - IQKeyboardManagerSwift (6.4.2)
-  - Kingfisher (7.1.2)
+  - Kingfisher (7.3.0)
   - LicensePlist (2.5.8)
   - MapboxMobileEvents (0.10.2)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
-  - Proximiio (5.2.19):
+  - Proximiio (5.2.23):
     - CrystDBCipher
     - DarklyEventSource
-  - ProximiioMapLibre (5.8.0):
+  - ProximiioMapLibre (5.20.0):
     - Alamofire
     - GRMustache.swift
     - Proximiio
@@ -32,7 +32,7 @@ PODS:
     - SwiftyJSON
   - ProximiioMapView (5.12.2):
     - MapboxMobileEvents (= 0.10.2)
-  - ProximiioProcessor (0.2.3):
+  - ProximiioProcessor (0.10.0):
     - Proximiio
     - SwiftyJSON
   - SDWebImage/Core (4.4.8)
@@ -40,12 +40,12 @@ PODS:
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
   - SnapKit (5.0.1)
-  - SQLCipher (4.5.0):
-    - SQLCipher/standard (= 4.5.0)
-  - SQLCipher/common (4.5.0)
-  - SQLCipher/standard (4.5.0):
+  - SQLCipher (4.5.1):
+    - SQLCipher/standard (= 4.5.1)
+  - SQLCipher/common (4.5.1)
+  - SQLCipher/standard (4.5.1):
     - SQLCipher/common
-  - SwiftLint (0.46.2)
+  - SwiftLint (0.47.1)
   - SwiftyJSON (5.0.1)
   - TapticEngine (1.2.0)
 
@@ -63,6 +63,7 @@ DEPENDENCIES:
   - Kingfisher
   - LicensePlist (~> 2.5.8)
   - PopupDialog (~> 1.1)
+  - Proximiio
   - ProximiioMapLibre
   - ProximiioProcessor
   - SnapKit (~> 5.0.0)
@@ -123,7 +124,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ActionPicker: 7add2007a310f1ebd728f5fe14732cc6d114ddf9
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   AlignedCollectionViewFlowLayout: bfbffc18e70d4f965b0e4044dea8502a38ff86b3
   CheckboxButton: 99f57944df0c2b58ba359f96e0d35f6443320cf9
   Closures: a83b9892a5b1c4125a9dfcd53e2754db5d7f6d22
@@ -132,26 +133,26 @@ SPEC CHECKSUMS:
   DKCarouselView: 6229f8974d357a679bdd2b2e8f1e00eedb117249
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
-  Eureka: 60cf058f86a8fb3ed26165ba5292b9850361b0a6
+  Eureka: 28ad9dec6286cd7cd601fdf8e8df39bb7356a8f4
   FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
   GRMustache.swift: a6436504284b22b4b05daf5f46f77bd3fe00a9a2
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
   IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
-  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  Kingfisher: cdb1189a9223b1bc028816bd47c8b8101a58831c
   LicensePlist: 3ad60988ec640a2aeae74cdd2e6d01531c03b7cd
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  Proximiio: 3ccdeffb609280d57751489247cc95f20fc77419
-  ProximiioMapLibre: 1cd8a96703a9684e2dfc0a533ecb5fbe03baf5e6
+  Proximiio: 307d063a8b7ab7a9f6c91cc51bba5bdb08524a56
+  ProximiioMapLibre: 0e12d6870cc304fd7bc7931b345b98393ee1fb07
   ProximiioMapView: 60540edc88a1a3b7d7fddedd577bfe12ac9ce163
-  ProximiioProcessor: f93daeaf93aeabaf2ee751a2aae1118de65be053
+  ProximiioProcessor: 4c4634ce5bc0a4c372567a6e5324c48d8c200d0c
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SQLCipher: 98dc22f27c0b1790d39e710d440f22a466ebdb59
-  SwiftLint: 6bc52a21f0fd44cab9aa2dc8e534fb9f5e3ec507
+  SQLCipher: 712e8416685e8e575b9b0706ffee71678b2fdcf8
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   TapticEngine: ed6f5b4a2e9aa46d4e8fa69a72a7a0b6719bf8ac
 
-PODFILE CHECKSUM: f6939dae09cae0be08ae24fef148bb99ce3dc76e
+PODFILE CHECKSUM: bdaa47eb666b9cd680d15c95d2f16df7af1c1f01
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
