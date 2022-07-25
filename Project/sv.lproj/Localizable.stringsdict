@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>time_minute</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu minutes</string>
+			<key>one</key>
+			<string>%lu minute</string>
+			<key>two</key>
+			<string>%lu minutes</string>
+			<key>few</key>
+			<string>%lu minutes</string>
+			<key>many</key>
+			<string>%lu minutes</string>
+			<key>other</key>
+			<string>%lu minutes</string>
+		</dict>
+	</dict>
+	<key>time_second</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu seconds</string>
+			<key>one</key>
+			<string>%lu second</string>
+			<key>two</key>
+			<string>%lu seconds</string>
+			<key>few</key>
+			<string>%lu seconds</string>
+			<key>many</key>
+			<string>%lu seconds</string>
+			<key>other</key>
+			<string>%lu seconds</string>
+		</dict>
+	</dict>
+	<key>distance_step</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu steps</string>
+			<key>one</key>
+			<string>%lu step</string>
+			<key>two</key>
+			<string>%lu steps</string>
+			<key>few</key>
+			<string>%lu steps</string>
+			<key>many</key>
+			<string>%lu steps</string>
+			<key>other</key>
+			<string>%lu steps</string>
+		</dict>
+	</dict>
+	<key>distance_step_left</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu steps left</string>
+			<key>one</key>
+			<string>%lu step left</string>
+			<key>two</key>
+			<string>%lu steps left</string>
+			<key>few</key>
+			<string>%lu steps left</string>
+			<key>many</key>
+			<string>%lu steps left</string>
+			<key>other</key>
+			<string>%lu steps left</string>
+		</dict>
+	</dict>
+	<key>distance_meter</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu meters</string>
+			<key>one</key>
+			<string>%lu meter</string>
+			<key>two</key>
+			<string>%lu meters</string>
+			<key>few</key>
+			<string>%lu meters</string>
+			<key>many</key>
+			<string>%lu meters</string>
+			<key>other</key>
+			<string>%lu meters</string>
+		</dict>
+	</dict>
+	<key>distance_meter_left</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@VARIABLE@</string>
+		<key>VARIABLE</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lu</string>
+			<key>zero</key>
+			<string>%lu meters left</string>
+			<key>one</key>
+			<string>%lu meter left</string>
+			<key>two</key>
+			<string>%lu meters left</string>
+			<key>few</key>
+			<string>%lu meters left</string>
+			<key>many</key>
+			<string>%lu meters left</string>
+			<key>other</key>
+			<string>%lu meters left</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -19,7 +19,8 @@ extension AppDelegate {
         // force use specific api version
         (ProximiioAPI.sharedManager())?.setApiVersion("v5")
         (ProximiioAPI.sharedManager())?.setApi("https://api.proximi.fi")
-        
+
+
         // show the main application
         Proximiio.sharedInstance()?.auth(withToken: appToken, callback: { state in
             
@@ -57,12 +58,13 @@ extension AppDelegate {
 //        pdrProcessor.hiThreshold = 1.0
 //        pdrProcessor.lowThreshold = 0.98
 //        ProximiioLocationManager.shared()?.addProcessor(pdrProcessor, avoidDuplicates: true)
-//
+
 //        // add snap processors
 //        snapProcessor.threshold = 8.0
 //        ProximiioLocationManager.shared()?.addProcessor(snapProcessor, avoidDuplicates: false)
 
         // simulation processor
+        simulationProcessor.supportFreeride = true
         ProximiioLocationManager.shared()?.addProcessor(simulationProcessor, avoidDuplicates: true)
         
         // startup proximiio

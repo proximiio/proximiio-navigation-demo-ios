@@ -209,7 +209,7 @@ class MapViewController: BaseViewController {
         let config = ProximiioMapLibreConfiguration(token: mapToken)
         config.showRasterFloorplans = false
         config.showGeoJSONFloorplans = true
-        
+
         // prepare map
         mapView = MGLMapView(frame: view.frame)
         // set map delegate
@@ -264,7 +264,7 @@ class MapViewController: BaseViewController {
         view.addSubview(mapUIOverlayHeader)
         
         mapUIOverlayHeader.snp.makeConstraints {
-            $0.height.equalTo(UIScreen.main.bounds.height)
+//            $0.height.equalTo(UIScreen.main.bounds.height)
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
             $0.top.equalTo(mapView.snp.top)
@@ -275,7 +275,7 @@ class MapViewController: BaseViewController {
         view.addSubview(mapUIOverlayFooter)
         
         mapUIOverlayFooter.snp.makeConstraints {
-            $0.height.equalTo(UIScreen.main.bounds.height)
+//            $0.height.equalTo(UIScreen.main.bounds.height)
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
             $0.bottom.equalTo(mapView.snp.bottom)
